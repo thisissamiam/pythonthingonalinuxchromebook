@@ -8,7 +8,7 @@ def write(input):
     for i in input:
         total += i
         print(total)
-        num = (random.randint(0,0))*.10
+        num = (random.randint(1,2))*.10
         time.sleep(num)
         print('\033[A\033[A')
     print('')
@@ -53,23 +53,59 @@ story = {
         'intro': 'You go back to bed and sleep longer',
         'text': 'You woke up and noticed you have missed the bus. What do you do?',
         '1': 'Ask mom for a ride',
-        '2': '',
-        '3': ''
-    }
+        '2': 'Walk to school',
+        '3': 'Skip school'
+    },
+    '1.11':{
+        'intro': 'You get up and find mom. She sees you and yells at you that you missed the bus. You ask her for a ride.',
+        'text': 'She says she has to go to work, and told you to figure it out yourself. What do you do?',
+        '1': 'Walk to school',
+        '2': 'Knock on other peoples doors untill one can give you a ride',
+        '3': 'Skip school'
+    },
+    '1.111':{
+        'intro': 'You grab your stuff and go out the door. You notice a man nearby.',
+        'text': 'The man wanted to talk to you. What do you do?',
+        '1': 'Talk to the man',
+        '2': 'Tell them that you need to walk to school and you are late',
+        '3': 'Punch them in the face'
+    },
+    '1.1111':{
+        'intro': 'The man tells you that they have seen you before, and talks about life as he waters his plants.',
+        'text': 'The man asks you if you could fill up his watering can. What do you do?',
+        '1': 'Tell them you would love to but you really need to go',
+        '2': 'Tell them sure, and help them fill up their watering can',
+        '3': 'Take the watering can from them and throw it'
+    },
+
+    
 }
 layer = '1'
 while True:
+    try:
+        write(story[layer]['intro'])
+    except:
+        pass
     write(story[layer]['text'])
     write('1) ' + story[layer].get('1'))
     write('2) ' + story[layer].get('2'))
     write('3) ' + story[layer].get('3'))
     answer = input()
     if answer == '1':
-        layer += '.1'
+        if '.' in layer:
+            layer += '1'
+        else:
+            layer += '.1'
     elif answer == '2':
-        layer += '.2'
+        if '.' in layer:
+            layer += '2'
+        else:
+            layer += '.2'
     elif answer == '3':
-        layer += '.3'
+        if '.' in layer:
+            layer += '3'
+        else:
+            layer += '.3'
 
 
 

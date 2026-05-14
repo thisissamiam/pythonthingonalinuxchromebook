@@ -36,6 +36,7 @@ elif answer != 'n':
     # stop the program if the answer is not no
     exit(0)
 # will only run if answer is no or when the instructions finish
+write('Do you have a save file to load from?')
 os.system('clear')
 write('You woke up from your bed. What do you do?')
 write('1) Go back asleep')

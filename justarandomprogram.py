@@ -42,12 +42,18 @@ if answer == 'y':
     write('Please paste your save code.')
     answer = input()
 
-FirstLine = ['You woke up from bed. What do you do?']
-FirstQuestionChoice = ['1) Go back asleep']
-SecondQuestionChoice = ['2) Get up']
-ThirdQuestionChoice = ['3) Scroll on your phone']
-FourthQuestionChoice = ['']
-
+story = {
+    '1': {
+        'text': 'You woke up from your bed. What do you do?',
+        '1': 'Go back asleep',
+        '2': 'Get up',
+        '3:': 'Scroll on your phone'
+    },
+    '1.1':{
+        'intro': 'You go back to bed and sleep longer',
+        'text:': 'You woke up and noticed you have missed the bus. What do you do?'
+    }
+}
 
 
 while True:

@@ -103,6 +103,13 @@ story = {
             'text': 'You make it to school, but you are unsure of what to do next. What do you do?',
             '1': 'Sneak in school so you aren't marked late',
             '2': 'Go in the main office to declare you are late',
+    }
+    '1.111111111': {
+            'intro': 'You find your way in, but you run into a teacher.',
+            'text': 'The teacher asks you are you late for school. What do you do?',
+            '1': 'Tell them that you were late',
+            '2': 'Ignore them and push them out of the way',
+            '3': 'Lie and say you are not late'
 
     
 }
@@ -113,7 +120,8 @@ while True:
     except:
         pass
     write(story[layer]['text'])
-    write('1) ' + story[layer].get('1'))
+    if story[layer].get('1'):
+        write('1) ' + story[layer].get('1'))
     write('2) ' + story[layer].get('2'))
     write('3) ' + story[layer].get('3'))
     answer = input()
@@ -133,13 +141,6 @@ while True:
         else:
             layer += '.3'
 
-    #                                 write('You picked: Keep running to school.')
-    #                                 write('You fought through the thirst and kept running')
-    #                                 os.system('clear')
-    #                                 write('You make it to school, but you are unsure of what to do next. What do you do?')
-    #                                 write("1) Sneak in school so you aren't marked late")
-    #                                 write('2) Go in the main office to declare you are late')
-    #                                 answer = input()
     #                                 if answer == '1':
     #                                     os.system('clear')
     #                                     write("You picked: Sneak in school so you arn't marked late")

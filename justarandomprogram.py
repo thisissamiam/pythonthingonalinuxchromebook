@@ -101,9 +101,9 @@ story = {
     '1.11111111': {
             'intro': 'You fought through the thirst and kept running',
             'text': 'You make it to school, but you are unsure of what to do next. What do you do?',
-            '1': 'Sneak in school so you aren't marked late',
+            '1': "Sneak in school so you aren't marked late",
             '2': 'Go in the main office to declare you are late',
-    }
+    },
     '1.111111111': {
             'intro': 'You find your way in, but you run into a teacher.',
             'text': 'The teacher asks you are you late for school. What do you do?',
@@ -116,7 +116,7 @@ story = {
         'text': 'You feel tired and want to take a nap, what do you do?',
         '1': 'Take the nap on your desk',
         '2': 'Sneak out after attendance so you can take a nap elsewhere',
-        '3': 'Pay attention and don't take a nap',
+        '3': "Pay attention and don't take a nap",
     },
     '1.11111111111': {
         'intro': 'The teacher notices and sends you to the office',
@@ -124,13 +124,14 @@ story = {
         '1': 'You pull out a handbook, and act like you know everything in it, and say that it says that if a student has sleep deprivation, then you can nap',
         '2': 'Lie.',
         '3': 'IM SORRY IM SORRY IM SORRY *start crying*',
+    },
     '1.111111111111': {
         'intro': 'The principal looks at you, and looks at the handbook.',
         'text': 'The principal agrees, and says they are sorry. What do you say?',
         '1': "Get Jiggy with it - trust i didn't make this - game dev?",
         '2': 'I KNEW IT HAAHAHAHHAHAHHA YOUR HANDBOOK SUCKS',
         '3': 'Tell them you accept their apology',
-    
+    }
     
 
     
@@ -144,9 +145,9 @@ while True:
     write(story[layer]['text'])
     if story[layer].get('1'):
         write('1) ' + story[layer].get('1'))
-    if story[layer].get('2')):
+    if story[layer].get('2'):
         write('2) ' + story[layer].get('2'))
-    if write('3) ' + story[layer].get('3')):
+    if story[layer].get('3'):
         write('3) ' + story[layer].get('3'))
     answer = input()
     if answer == '1':

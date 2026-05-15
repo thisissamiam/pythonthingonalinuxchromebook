@@ -3,15 +3,16 @@ import random
 import os
 
 def write(input):
-    print()
-    total = ''
-    for i in input:
-        total += i
-        print(total)
-        num = (random.randint(1,2))*.10
-        time.sleep(num)
-        print('\033[A\033[A')
-    print('')
+  print(input)
+    # print()
+    # total = ''
+    # for i in input:
+    #     total += i
+    #     print(total)
+    #     num = (random.randint(1,2))*.10
+    #     time.sleep(num)
+    #     print('\033[A\033[A')
+    # print('')
     
 # write('Hello!')
 # write('Welcome')
@@ -56,6 +57,13 @@ story = {
         '2': 'Walk to school',
         '3': 'Skip school'
     },
+    '1.2': {
+        'intro': 'You get out of bed and get ready for the bus',
+        'text': 'Do you go to school?',
+        '1': 'No',
+        '2': 'Yes',
+    },
+    
     '1.11':{
         'intro': 'You get up and find mom. She sees you and yells at you that you missed the bus. You ask her for a ride.',
         'text': 'She says she has to go to work, and told you to figure it out yourself. What do you do?',

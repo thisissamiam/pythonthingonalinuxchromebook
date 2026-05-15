@@ -94,8 +94,15 @@ story = {
     '1.1111111': {
         'intro': 'You take off the backpack, throw it into a bush and keep running',
         'text': 'As you are running you need a drink. What do you do?',
-        '1'
-    }
+        '1': 'Keep running to school',
+        '2': 'Go back to the backpack and get your waterbottle',
+        '3': 'Walk the rest'
+    },
+    '1.11111111': {
+            'intro': 'You fought through the thirst and kept running',
+            'text': 'You make it to school, but you are unsure of what to do next. What do you do?',
+            '1': 'Sneak in school so you aren't marked late',
+            '2': 'Go in the main office to declare you are late',
 
     
 }
@@ -126,87 +133,6 @@ while True:
         else:
             layer += '.3'
 
-
-
-
-    # os.system('clear')
-    # write('You woke up from your bed. What do you do?')
-    # write('1) Go back asleep')
-    # write('2) Get up')
-    # write('3) Scroll on your phone')
-    # answer = input()
-    # if answer == '1':
-    #     os.system('clear')
-    #     write('You picked: Go back asleep')
-    #     write('You go back to bed and sleep longer')
-    #     os.system('clear')
-    #     write('You woke up and noticed that you have missed the bus. What do you do?')
-    #     write('1) Ask mom for a ride')
-    #     write('2) Walk to school')
-    #     write('3) Skip school')
-    #     answer = input()
-    #     if answer == '1':
-    #         os.system('clear')
-    #         write('You picked: Ask mom for a ride')
-    #         write('You get up and find mom. She sees you and yells at you that you missed the bus. You ask her for a ride.')
-    #         os.system('clear')
-    #         write('She says she has to go to work, and told you to figure it out yourself. What do you do?')
-    #         write('1) Walk to school')
-    #         write('2) Knock on other peoples doors untill one can give you a ride')
-    #         write('3) Skip school')
-    #         answer = input()
-    #         if answer == '1':
-    #             os.system('clear')
-    #             write('You picked: Walk to school')
-    #             write('You grab your stuff and go out the door. You notice a man nearby.')
-    #             os.system('clear')
-    #             write('The man wanted to talk to you. What do you do?')
-    #             write('1) Talk to the man')
-    #             write('2) Tell them that you need to walk to school and you are late')
-    #             write('3) Punch them in the face')
-    #             answer = input()
-    #             if answer == '1':
-    #                 os.system('clear')
-    #                 write('You picked: Talk to the man')
-    #                 write('The man tells you that they have seen you before, and talks about life as he waters his plants.')
-    #                 os.system('clear')
-    #                 write('The man asks you if you could fill up his watering can. What do you do?')
-    #                 write('1) Tell them you would love to but you really need to go')
-    #                 write('2) Tell them sure, and help them fill up their watering can')
-    #                 write('3) Take the watering can from them and throw it')
-    #                 answer = input()
-    #                 if answer == '1':
-    #                     os.system('clear')
-    #                     write('You picked: Tell them you would love to but you really need to go')
-    #                     write('The man said that was fine, and told you that they would be happy to see you later.')
-    #                     os.system('clear')
-    #                     write('You start walking to school, and look at your watch. You are 10 minutes late. What do you do?')
-    #                     write('1) Start running to school')
-    #                     write('2) Eat out at a fast food place')
-    #                     write('3) Keep walking how you were before')
-    #                     answer = input()
-    #                     if answer == '1':
-    #                         os.system('clear')
-    #                         write('You picked: Start running to school')
-    #                         write('You start running to school as fast as you can.')
-    #                         os.system('clear')
-    #                         write('As you are running, your backpack is very heavy and is making it hard to run. What do you do?')
-    #                         write('1) Take off the backpack and forget about it so you can run faster')
-    #                         write('2) Accept you will be a little late and start walking')
-    #                         write('3) Keep running as is')
-    #                         answer = input()
-    #                         if answer == '1':
-    #                             os.system('clear')
-    #                             write('You picked: Take off the backpackand forget about it so you can run faster')
-    #                             write('You take off the backpack, throw it into a bush and keep running')
-    #                             os.system('clear')
-    #                             write('As you are running you need a drink. What do you do?')
-    #                             write('1) Keep running to school')
-    #                             write('2) Go back to the backpack and get your waterbottle')
-    #                             write('3) Walk the rest')
-    #                             answer = input()
-    #                             if answer == '1':
-    #                                 os.system('clear')
     #                                 write('You picked: Keep running to school.')
     #                                 write('You fought through the thirst and kept running')
     #                                 os.system('clear')

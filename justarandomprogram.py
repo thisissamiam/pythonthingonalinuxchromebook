@@ -63,6 +63,25 @@ story = {
         '1': 'No',
         '2': 'Yes',
     },
+        '1.3': {
+        'intro': 'You scroll on your phone',
+        'text': 'Do you get ready for school?',
+        '1': 'No',
+        '2': 'Yes',
+    },
+    '1.21': {
+        'intro': "You decide that you don't want to go to school",
+        'text': 'Play video games?',
+        '1': 'No',
+        '2': 'Yes',
+    },
+    '1.22': {
+    'intro': 'You decide to go to school',
+    'text': 'Where do you want to sit on the bus?',
+    '1': 'Next to someone',
+    '2': 'Alone',
+    },
+    
     
     '1.11':{
         'intro': 'You get up and find mom. She sees you and yells at you that you missed the bus. You ask her for a ride.',
@@ -146,10 +165,9 @@ story = {
 }
 layer = '1'
 while True:
-    try:
+  try:
+    if story.get(layer).get('intro'):
         write(story[layer]['intro'])
-    except:
-        pass
     write(story[layer]['text'])
     if story[layer].get('1'):
         write('1) ' + story[layer].get('1'))
@@ -157,22 +175,25 @@ while True:
         write('2) ' + story[layer].get('2'))
     if story[layer].get('3'):
         write('3) ' + story[layer].get('3'))
-    answer = input()
-    if answer == '1':
-        if '.' in layer:
-            layer += '1'
-        else:
-            layer += '.1'
-    elif answer == '2':
-        if '.' in layer:
-            layer += '2'
-        else:
-            layer += '.2'
-    elif answer == '3':
-        if '.' in layer:
-            layer += '3'
-        else:
-            layer += '.3'
+  except:
+    write('You finished the game as far as you could')
+    exit()
+  answer = input()
+  if answer == '1':
+      if '.' in layer:
+          layer += '1'
+      else:
+          layer += '.1'
+  elif answer == '2':
+      if '.' in layer:
+          layer += '2'
+      else:
+          layer += '.2'
+  elif answer == '3':
+      if '.' in layer:
+          layer += '3'
+      else:
+          layer += '.3'
 
 
 

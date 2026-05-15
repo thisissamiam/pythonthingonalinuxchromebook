@@ -77,6 +77,25 @@ story = {
         '2': 'Tell them sure, and help them fill up their watering can',
         '3': 'Take the watering can from them and throw it'
     },
+    '1.11111':{
+        'intro': 'The man said that was fine, and told you that they would be happy to see you later.',
+        'text': 'You start walking to school, and look at your watch. You are 10 minutes late. What do you do?',
+        '1': 'Start running to school',
+        '2': 'Eat out at a fast food place',
+        '3': 'keep walking how you were before'
+    },
+    '1.111111': {
+        'intro': 'You start running to school as fast as you can.',
+        'text': 'As you are running, your backpack is very heavy and is making it hard to run. What do you do?',
+        '1': 'Take off the backpack and forget about it so you can run faster',
+        '2': 'Accept you will be a little late and start walking',
+        '3': 'Keep running as is'
+    },
+    '1.1111111': {
+        'intro': 'You take off the backpack, throw it into a bush and keep running',
+        'text': 'As you are running you need a drink. What do you do?',
+        '1'
+    }
 
     
 }

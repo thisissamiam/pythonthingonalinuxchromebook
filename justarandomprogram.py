@@ -110,6 +110,28 @@ story = {
             '1': 'Tell them that you were late',
             '2': 'Ignore them and push them out of the way',
             '3': 'Lie and say you are not late'
+    },
+    '1.1111111111': {
+        'intro': 'The teacher is accepting and marks you as on time, and you walk to your first class.',
+        'text': 'You feel tired and want to take a nap, what do you do?',
+        '1': 'Take the nap on your desk',
+        '2': 'Sneak out after attendance so you can take a nap elsewhere',
+        '3': 'Pay attention and don't take a nap',
+    },
+    '1.11111111111': {
+        'intro': 'The teacher notices and sends you to the office',
+        'text': 'The principal asks you what happened. What do you say?',
+        '1': 'You pull out a handbook, and act like you know everything in it, and say that it says that if a student has sleep deprivation, then you can nap',
+        '2': 'Lie.',
+        '3': 'IM SORRY IM SORRY IM SORRY *start crying*',
+    '1.111111111111': {
+        'intro': 'The principal looks at you, and looks at the handbook.',
+        'text': 'The principal agrees, and says they are sorry. What do you say?',
+        '1': "Get Jiggy with it - trust i didn't make this - game dev?",
+        '2': 'I KNEW IT HAAHAHAHHAHAHHA YOUR HANDBOOK SUCKS',
+        '3': 'Tell them you accept their apology',
+    
+    
 
     
 }
@@ -122,8 +144,10 @@ while True:
     write(story[layer]['text'])
     if story[layer].get('1'):
         write('1) ' + story[layer].get('1'))
-    write('2) ' + story[layer].get('2'))
-    write('3) ' + story[layer].get('3'))
+    if story[layer].get('2')):
+        write('2) ' + story[layer].get('2'))
+    if write('3) ' + story[layer].get('3')):
+        write('3) ' + story[layer].get('3'))
     answer = input()
     if answer == '1':
         if '.' in layer:
@@ -141,26 +165,8 @@ while True:
         else:
             layer += '.3'
 
-    #                                 if answer == '1':
-    #                                     os.system('clear')
-    #                                     write("You picked: Sneak in school so you arn't marked late")
-    #                                     write('You find your way in, but you run into a teacher.')
-    #                                     os.system('clear')
-    #                                     write('The teacher asks you are you late for school. What do you do?')
-    #                                     write('1) Tell them that you were late')
-    #                                     write('2) Ignore them and push them out of the way')
-    #                                     write('3) Lie and say you are not late')
-    #                                     answer = input()
-    #                                     if answer == '1':
-    #                                         os.system('clear')
-    #                                         write('You picked: Tell them that you were late')
-    #                                         write('The teacher is accepting and marks you as on time, and you walk to your first class.')
-    #                                         os.system('clear')
-    #                                         write('You feel tired and want to take a nap, what do you do?')
-    #                                         write('1) Take the nap on your desk')
-    #                                         write('2) Sneak out after attendence so you can take a nap elsewhere')
-    #                                         write("3) Pay attention and don't take a nap")
-    #                                         answer = input()
+
+
     #                                         if answer == '1':
     #                                             write('You picked: Take the nap on your desk')
     #                                             write('The teacher notices and sends you to the office')

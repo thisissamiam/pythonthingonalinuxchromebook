@@ -13,35 +13,41 @@ def write(input):
     #     time.sleep(num)
     #     print('\033[A\033[A')
     # print('')
-    
-# write('Hello!')
-# write('Welcome')
-# write('to...')
-# write('justarandomprogram!!!')
-# os.system('clear')
-# write('Do you want the instructions? (y,n)')
-# answer = input()
-# if answer == 'y':
-#     os.system('clear')
-#     write('-----------------')
-#     write('Instructions:')
-#     write('You will be given a question.')
-#     write('It will have multiple answer choices.')
-#     write('You must say the number you want')
-#     write('For example, 1, then hit enter')
-#     write('Good luck!')
-#     write('-----------------')
-# # Check if the answer is not no
-# elif answer != 'n':
-#     write('You picked neither y or n!!')
-#     # stop the program if the answer is not no
-#     exit(0)
-# # will only run if answer is no or when the instructions finish
-# write('Do you have a save file to load from? (y,n)')
-# answer = input()
-# if answer == 'y':
-#     write('Please paste your save code.')
-#     answer = input()
+layer = '1'
+write('Hello!')
+write('Welcome')
+write('to...')
+write('justarandomprogram!!!')
+os.system('clear')
+write('Do you want the instructions? (y,n)')
+answer = input()
+if answer == 'y':
+    os.system('clear')
+    write('-----------------')
+    write('Instructions:')
+    write('You will be given a question.')
+    write('It will have multiple answer choices.')
+    write('You must say the number you want')
+    write('For example, 1, then hit enter')
+    write('To save the game, type S instead of a choice')
+    write('Good luck!')
+    write('-----------------')
+# Check if the answer is not no
+elif answer != 'n':
+    write('You picked neither y or n!!')
+    # stop the program if the answer is not no
+    exit(0)
+# will only run if answer is no or when the instructions finish
+write('Do you have a save file to load from? (y,n)')
+answer = input()
+if answer == 'y':
+  write('Please paste your save code.')
+  answer = input()
+  layer = answer
+elif answer == 'n':
+  write('Ok, starting a new game')
+else:
+  exit()
 
 story = {
     '1': {
@@ -81,8 +87,6 @@ story = {
     '1': 'Next to someone',
     '2': 'Alone',
     },
-    
-    
     '1.11':{
         'intro': 'You get up and find mom. She sees you and yells at you that you missed the bus. You ask her for a ride.',
         'text': 'She says she has to go to work, and told you to figure it out yourself. What do you do?',
@@ -97,6 +101,107 @@ story = {
         '2': 'Tell them that you need to walk to school and you are late',
         '3': 'Punch them in the face'
     },
+    '1.112':{
+    'intro': 'You go out the door pass a man, and start knocking on doors.',
+    'text': 'You knock on someones door and they shove you and close the door. You are bleeding out. What do you do?',
+    '1': 'Call for help',
+    '2': 'Try to get up',
+    '3': 'Stay there',
+    },
+    '1.1121':{
+    'intro': 'You call for help and someone comes and calls 911.',
+    'text': 'You do not survive in the hospital.',
+    '1': 'Call for help',
+    '2': 'Try to get up',
+    '3': 'Stay there',
+    '1.1113':{
+        'intro': 'You look at the man. And punch them.',
+        'text': 'The man takes their phone out runs away and calls the police. What do you do?',
+        '1': 'Follow the man',
+        '2': 'Run away',
+        '3': 'Stay put',
+    },
+    '1.11131':{
+        'intro': 'You follow the man.',
+        'text': 'He goes inside his house. What do you do?',
+        '1': 'Go inside his house',
+        '2': 'Go to school',
+    },
+    '1.111311':{
+        'intro': 'You follow him inside his house.',
+        'text': 'The man was a murderer. What do you do?',
+        '1': 'FIGHT BACK',
+        '2': 'Give up',
+    },
+    '1.1113111':{
+        'intro': 'You fight back.',
+        'text': 'They kill you',
+        '1': 'You died. This choice does not work',
+    },
+    '1.1113112':{
+        'intro': 'You give up.',
+        'text': 'They kill you even after you surrender',
+        '1': 'You died. This choice does not work',
+    },
+    '1.111312':{
+        'intro': 'You go to school normally.',
+        'text': 'The police find you in school. What do you do?',
+        '1': 'Hide',
+        '2': 'Give up',
+    },
+    '1.1113121':{
+    'intro': 'You hide from the police and they cannot find you.',
+    'text': 'You were in the clear, but a kid sniched on you, and the police arrest you',
+    '1': 'You got arrested. This choice does not work.',
+    },
+    '1.1113122':{
+    'intro': 'You give up.',
+    'text': 'The police arrest you.',
+    '1': 'You were arrested. This choise does not work',
+    },
+    '1.11132':{
+        'intro': 'You run away.',
+        'text': 'Eventually, the police find you. What do you do?',
+        '1': 'Evade',
+        '2': 'Try to fight them',
+    },
+    '1.111321':{
+        'intro': 'You attempt to run away from you.',
+        'text': 'Eventually, the police catch up with you, and you trip and fall on a rock',
+        '1': 'You died. This choice does not work',
+    },
+    '1.111322':{
+        'intro': 'You fight the police.',
+        'text': 'You lose the fight',
+        '1': 'You died. This choice does not work',
+    },
+    '1.11133':{
+        'intro': 'You stay put and let the police come.',
+        'text': 'The police come and ask you what happend. What do you do?',
+        '1': 'Lie',
+        '2': 'Tell the truth',
+      },
+    '1.111331':{
+        'intro': 'You lie to the police.',
+        'text': "The police don't belive your lie and tell you to put your hands behind you back. What do you do?",
+        '1': 'Try to resist',
+        '2': 'Put your hands behind your back',
+      },
+    '1.1113312':{
+        'intro': 'You tell the truth',
+        'text': 'They arrest you. You are useless now.',
+        '1': 'You got arrested. This choice does not work.'
+      },
+    '1.1113311':{
+        'intro': 'You try to resist.',
+        'text': 'They tase you and you fall onto the ground but you die',
+        '1': 'You died. This choice does not work.'
+      },
+    '1.1113312':{
+        'intro': 'You got arrested',
+        'text': 'They arrest you and now you are useless in life',
+        '1': 'You got arrested. This choice does not work.'
+      },
     '1.1111':{
         'intro': 'The man tells you that they have seen you before, and talks about life as he waters his plants.',
         'text': 'The man asks you if you could fill up his watering can. What do you do?',
@@ -163,7 +268,7 @@ story = {
 
     
 }
-layer = '1'
+
 while True:
   try:
     if story.get(layer).get('intro'):
@@ -194,36 +299,9 @@ while True:
           layer += '3'
       else:
           layer += '.3'
-
-
-
-    #                                         if answer == '1':
-    #                                             write('You picked: Take the nap on your desk')
-    #                                             write('The teacher notices and sends you to the office')
-    #                                             # PATH END
-    # elif answer == '2':
-    #     os.system('clear')
-    #     write('You picked: Get up')
-    #     write('You get ready for school, and head out for the bus')
-    #     os.system('clear')
-    #     write('The bus driver told you that you could sit anywhere that day. Where do you choose?')
-    #     write('1) Sit with no one')
-    #     write('2) Sit with people that look like they are nice')
-    #     write('3) Sit with the person who is sitting alone')
-    #     answer = input()
-    #     if answer == '1':
-    #         os.system('clear')
-    #         write('You picked: Sit with no one')
-    #         write('You found a spot where no one was and sat down')
-    #         os.system('clear')
-    #         write('You are not sure what to do on the bus, what should you do?')
-    #         write('1) Take a nap')
-    #         write('2) Look out the window')
-    #         write('3) Scroll on your phone')
-    #         answer = input()
-    #         if answer == '1':
-    #             os.system('clear')
-    #             write('You picked: Take a nap')
-    #             write('You fall asleep')
-    #             os.system('clear')
-    #             write('The bus made it to school, and someone woke you up. They looked nice. What do you do?')`
+  elif answer.lower() == 's':
+    write('Saving game...')
+    write(layer)
+    write('The previous message is your save code')
+    exit()
+    

@@ -3,16 +3,15 @@ import random
 import os
 
 def write(input):
-  print(input)
-    # print()
-    # total = ''
-    # for i in input:
-    #     total += i
-    #     print(total)
-    #     num = (random.randint(1,2))*.10
-    #     time.sleep(num)
-    #     print('\033[A\033[A')
-    # print('')
+    print()
+    total = ''
+    for i in input:
+        total += i
+        print(total)
+        num = (random.randint(1,2))*.10
+        time.sleep(num)
+        print('\033[A\033[A')
+    print('')
 layer = '1'
 write('Hello!')
 write('Welcome')
@@ -334,10 +333,16 @@ while True:
   try:
     if story.get(layer).get('intro'):
         write(story[layer]['intro'])
+    except:
+    write('You finished the game as far as you could')
+    exit()
+  try:
         print(story[layer]['introimage'])
         write('Hit enter to continue')
         input()
         os.system('clear')
+  except:
+    pass
     write(story[layer]['text'])
     if story[layer].get('1'):
         write('1) ' + story[layer].get('1'))
@@ -346,10 +351,7 @@ while True:
     if story[layer].get('3'):
         write('3) ' + story[layer].get('3'))
     if story[layer].get('image'):
-        write(story[layer].get('image'))
-  except:
-    write('You finished the game as far as you could')
-    exit()
+        print(story[layer].get('image'))
   answer = input()
   os.system('clear')
   if answer == '1':

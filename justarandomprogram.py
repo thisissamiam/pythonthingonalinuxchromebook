@@ -100,7 +100,7 @@ art = {
             ██                                               ██
             ██                                               ██
             ██                                               ██'''
-  
+
   }
 
 
@@ -324,24 +324,24 @@ story = {
         '2': 'I KNEW IT HAAHAHAHHAHAHHA YOUR HANDBOOK SUCKS',
         '3': 'Tell them you accept their apology',
     }
-    
 
-    
+
+
 }
 
 while True:
-  try:
-    if story.get(layer).get('intro'):
-        write(story[layer]['intro'])
+    try:
+        if story.get(layer).get('intro'):
+            write(story[layer]['intro'])
     except:
         write('You finished the game as far as you could')
         exit()
-  try:
+    try:
         print(story[layer]['introimage'])
         write('Hit enter to continue')
         input()
         os.system('clear')
-  except:
+    except:
         pass
     write(story[layer]['text'])
     if story[layer].get('1'):
@@ -351,27 +351,27 @@ while True:
     if story[layer].get('3'):
         write('3) ' + story[layer].get('3'))
     if story[layer].get('image'):
-        print(story[layer].get('image'))
-  answer = input()
-  os.system('clear')
-  if answer == '1':
+            print(story[layer].get('image'))
+    answer = input()
+    os.system('clear')
+    if answer == '1':
       if '.' in layer:
           layer += '1'
       else:
           layer += '.1'
-  elif answer == '2':
+    elif answer == '2':
       if '.' in layer:
           layer += '2'
       else:
           layer += '.2'
-  elif answer == '3':
+    elif answer == '3':
       if '.' in layer:
           layer += '3'
       else:
           layer += '.3'
-  elif answer.lower() == 's':
-    write('Saving game...')
-    write(layer)
-    write('The previous message is your save code')
-    exit()
-    
+    elif answer.lower() == 's':
+        write('Saving game...')
+        write(layer)
+        write('The previous message is your save code')
+        exit()
+

@@ -20,7 +20,7 @@ write('to...')
 write('justarandomprogram!!!')
 time.sleep(1)
 os.system('clear')
-write('A image will appear on your screen. Please make sure it fits.')
+write('A image will appear on your screen. Please make sure it fits. Please say, "good" to confirm.')
 size = ''
 print(r'''
 ██████████████████████████████████████████████████████████████████████████████
@@ -40,6 +40,11 @@ print(r'''
 █                                                                            █
 ██████████████████████████████████████████████████████████████████████████████''')
 answer = input()
+if answer.lower() == 'good':
+  write('Good.')
+else:
+  write("You didn't follow the instructions. They may be cut off your screen. Try resizing your output/terminal")
+  exit()
 write('Do you want the instructions? (y,n)')
 answer = input()
 if answer == 'y':
@@ -67,6 +72,7 @@ if answer == 'y':
   layer = answer
 elif answer == 'n':
   write('Ok, starting a new game')
+  os.system('clear')
 else:
   exit()
 
@@ -87,7 +93,7 @@ art = {
   'inbedlayingdown': r'''
                         /‾\
                        |• ┐|
-                       |  │|─┐
+                       |  │├─┐
                        |• ┘| │
           ██            \_/  │              /
           ██                 └───-----------
@@ -329,6 +335,10 @@ while True:
   try:
     if story.get(layer).get('intro'):
         write(story[layer]['intro'])
+        print(story[layer]['introimage'])
+        write('Hit enter to continue')
+        input()
+        os.system('clear')
     write(story[layer]['text'])
     if story[layer].get('1'):
         write('1) ' + story[layer].get('1'))
@@ -342,6 +352,7 @@ while True:
     write('You finished the game as far as you could')
     exit()
   answer = input()
+  os.system('clear')
   if answer == '1':
       if '.' in layer:
           layer += '1'

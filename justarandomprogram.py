@@ -55,6 +55,19 @@ story = {
         '1': 'Go back asleep',
         '2': 'Get up',
         '3': 'Scroll on your phone'
+        'image': '''
+                ---
+               /• •\
+               \└─┘/
+                ---
+                  └┐
+          ██       └─┐               /
+          ██         └─--------------
+          ███████████████████████████████████████████████████████
+          ███████████████████████████████████████████████████████
+            ██                                               ██
+            ██                                               ██
+            ██                                               ██'''
     },
     '1.1':{
         'intro': 'You go back to bed and sleep longer',
@@ -280,6 +293,8 @@ while True:
         write('2) ' + story[layer].get('2'))
     if story[layer].get('3'):
         write('3) ' + story[layer].get('3'))
+    if story[layer].get('image'):
+        write(story[layer].get('image'))
   except:
     write('You finished the game as far as you could')
     exit()

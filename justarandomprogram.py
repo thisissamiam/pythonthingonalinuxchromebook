@@ -21,7 +21,6 @@ write('justarandomprogram!!!')
 time.sleep(1)
 os.system('clear')
 write('A image will appear on your screen. Please make sure it fits.')
-time.sleep(1)
 size = ''
 print(r'''
 ██████████████████████████████████████████████████████████████████████████████
@@ -76,15 +75,28 @@ art = {
                 ---
                /• •\
                \└─┘/
-                ---
-                  └┐
-          ██       └─┐               /
-          ██         └─--------------
+                -+-
+                 │
+          ██     │                   /
+          ██     └─────--------------
           ███████████████████████████████████████████████████████
           ███████████████████████████████████████████████████████
             ██                                               ██
             ██                                               ██
             ██                                               ██''',
+  'inbedlayingdown': r'''
+                        /‾\
+                       |• ┐|
+                       |  │|─┐
+                       |• ┘| │
+          ██            \_/  │              /
+          ██                 └───-----------
+          ███████████████████████████████████████████████████████
+          ███████████████████████████████████████████████████████
+            ██                                               ██
+            ██                                               ██
+            ██                                               ██'''
+  
   }
 
 
@@ -100,6 +112,7 @@ story = {
     },
     '1.1':{
         'intro': 'You go back to bed and sleep longer',
+        'introimage': art['inbedlayingdown']
         'text': 'You woke up and noticed you have missed the bus. What do you do?',
         '1': 'Ask mom for a ride',
         '2': 'Walk to school',

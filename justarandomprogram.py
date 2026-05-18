@@ -55,11 +55,12 @@ elif answer == 'n':
 █                                                                    █
 ██████████████████████████████████████████████████████████████████████''')
 else:
-  write("You didn't pick y or n!!")
-  exit()
-if size = '':
+  if size == '':
+    write("You didn't pick y or n!!")
+    exit()
+if size == '':
   answer = input()
-if answer == 'y':
+if answer == 'y' and size == '':
   write('You have picked: middle')
   size = 'middle'
 elif answer == 'n':
@@ -74,11 +75,12 @@ elif answer == 'n':
 █                                                     █
 ███████████████████████████████████████████████████████''')
 else:
-  write("You didn't pick y or n!!")
-  exit()
-if size = '':
+  if size == '':
+    write("You didn't pick y or n!!")
+    exit()
+if size == '':
   answer = input()
-if answer == 'y':
+if answer == 'y' and size == '':
   write('You have picked: small')
   size = 'small'
 elif answer == 'n':
@@ -86,8 +88,9 @@ elif answer == 'n':
   print()
   write("I will disable the images due to your small terminal room")
 else:
-  write("You didn't pick y or n!!")
-  exit()
+  if size == '':
+    write("You didn't pick y or n!!")
+    exit()
 write('Do you want the instructions? (y,n)')
 answer = input()
 if answer == 'y':

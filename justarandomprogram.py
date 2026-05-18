@@ -20,10 +20,11 @@ write('to...')
 write('justarandomprogram!!!')
 time.sleep(1)
 os.system('clear')
-write('A image will appear on your screen. Please make sure it does not take too much space. If it does say n, if it fits say, y')
+write('A image will appear on your screen. Please make sure it fits.')
 time.sleep(1)
 size = ''
-print(r'''██████████████████████████████████████████████████████████████████████████████
+print(r'''
+██████████████████████████████████████████████████████████████████████████████
 █                                                                            █
 █                                                                            █
 █                                                                            █
@@ -40,57 +41,6 @@ print(r'''███████████████████████�
 █                                                                            █
 ██████████████████████████████████████████████████████████████████████████████''')
 answer = input()
-if answer == 'y':
-  write('You have picked: large')
-  size = 'large'
-elif answer == 'n':
-  os.system('clear')
-  print(r'''
-██████████████████████████████████████████████████████████████████████
-█                                                                    █
-█                                                                    █
-█                                                                    █
-█                                                                    █
-█                                                                    █
-█                                                                    █
-██████████████████████████████████████████████████████████████████████''')
-else:
-  if size == '':
-    write("You didn't pick y or n!!")
-    exit()
-if size == '':
-  answer = input()
-if answer == 'y' and size == '':
-  write('You have picked: middle')
-  size = 'middle'
-elif answer == 'n':
-  os.system('clear')
-  print(r'''
-███████████████████████████████████████████████████████
-█                                                     █
-█                                                     █
-█                                                     █
-█                                                     █
-█                                                     █
-█                                                     █
-███████████████████████████████████████████████████████''')
-else:
-  if size == '':
-    write("You didn't pick y or n!!")
-    exit()
-if size == '':
-  answer = input()
-if answer == 'y' and size == '':
-  write('You have picked: small')
-  size = 'small'
-elif answer == 'n':
-  os.system('clear')
-  print()
-  write("I will disable the images due to your small terminal room")
-else:
-  if size == '':
-    write("You didn't pick y or n!!")
-    exit()
 write('Do you want the instructions? (y,n)')
 answer = input()
 if answer == 'y':
@@ -121,13 +71,8 @@ elif answer == 'n':
 else:
   exit()
 
-story = {
-    '1': {
-        'text': 'You woke up from your bed. What do you do?',
-        '1': 'Go back asleep',
-        '2': 'Get up',
-        '3': 'Scroll on your phone',
-        'image': r'''
+art = {
+  'inbedlayingup': r'''
                 ---
                /• •\
                \└─┘/
@@ -139,7 +84,19 @@ story = {
           ███████████████████████████████████████████████████████
             ██                                               ██
             ██                                               ██
-            ██                                               ██'''
+            ██                                               ██''',
+  }
+
+
+
+
+story = {
+    '1': {
+        'text': 'You woke up from your bed. What do you do?',
+        '1': 'Go back asleep',
+        '2': 'Get up',
+        '3': 'Scroll on your phone',
+        'image': art['inbedlayingup']
     },
     '1.1':{
         'intro': 'You go back to bed and sleep longer',

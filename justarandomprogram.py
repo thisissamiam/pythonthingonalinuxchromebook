@@ -112,7 +112,7 @@ story = {
     },
     '1.1':{
         'intro': 'You go back to bed and sleep longer',
-        'introimage': art['inbedlayingdown']
+        'introimage': art['inbedlayingdown'],
         'text': 'You woke up and noticed you have missed the bus. What do you do?',
         '1': 'Ask mom for a ride',
         '2': 'Walk to school',

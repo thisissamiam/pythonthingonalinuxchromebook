@@ -127,6 +127,7 @@ story = {
     '1': 'Call for help',
     '2': 'Try to get up',
     '3': 'Stay there',
+    }
     '1.1113':{
         'intro': 'You look at the man. And punch them.',
         'text': 'The man takes their phone out runs away and calls the police. What do you do?',

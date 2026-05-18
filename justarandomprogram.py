@@ -334,15 +334,15 @@ while True:
     if story.get(layer).get('intro'):
         write(story[layer]['intro'])
     except:
-    write('You finished the game as far as you could')
-    exit()
+        write('You finished the game as far as you could')
+        exit()
   try:
         print(story[layer]['introimage'])
         write('Hit enter to continue')
         input()
         os.system('clear')
   except:
-    pass
+        pass
     write(story[layer]['text'])
     if story[layer].get('1'):
         write('1) ' + story[layer].get('1'))

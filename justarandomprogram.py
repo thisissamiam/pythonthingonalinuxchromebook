@@ -18,7 +18,76 @@ write('Hello!')
 write('Welcome')
 write('to...')
 write('justarandomprogram!!!')
+time.sleep(1)
 os.system('clear')
+write('A image will appear on your screen. Please make sure it does not take too much space. If it does say n, if it fits say, y')
+time.sleep(1)
+size = ''
+print(r'''██████████████████████████████████████████████████████████████████████████████
+█                                                                            █
+█                                                                            █
+█                                                                            █
+█                                                                            █
+█                                                                            █
+█                                                                            █
+█                                                                            █
+█                                                                            █
+█                                                                            █
+█                                                                            █
+█                                                                            █
+█                                                                            █
+█                                                                            █
+█                                                                            █
+██████████████████████████████████████████████████████████████████████████████''')
+answer = input()
+if answer == 'y':
+  write('You have picked: large')
+  size = 'large'
+elif answer == 'n':
+  os.system('clear')
+  print(r'''
+██████████████████████████████████████████████████████████████████████
+█                                                                    █
+█                                                                    █
+█                                                                    █
+█                                                                    █
+█                                                                    █
+█                                                                    █
+██████████████████████████████████████████████████████████████████████''')
+else:
+  write("You didn't pick y or n!!")
+  exit()
+if size = '':
+  answer = input()
+if answer == 'y':
+  write('You have picked: middle')
+  size = 'middle'
+elif answer == 'n':
+  os.system('clear')
+  print(r'''
+███████████████████████████████████████████████████████
+█                                                     █
+█                                                     █
+█                                                     █
+█                                                     █
+█                                                     █
+█                                                     █
+███████████████████████████████████████████████████████''')
+else:
+  write("You didn't pick y or n!!")
+  exit()
+if size = '':
+  answer = input()
+if answer == 'y':
+  write('You have picked: small')
+  size = 'small'
+elif answer == 'n':
+  os.system('clear')
+  print()
+  write("I will disable the images due to your small terminal room")
+else:
+  write("You didn't pick y or n!!")
+  exit()
 write('Do you want the instructions? (y,n)')
 answer = input()
 if answer == 'y':
@@ -55,7 +124,7 @@ story = {
         '1': 'Go back asleep',
         '2': 'Get up',
         '3': 'Scroll on your phone',
-        'image': '''
+        'image': r'''
                 ---
                /• •\
                \└─┘/
@@ -127,7 +196,7 @@ story = {
     '1': 'Call for help',
     '2': 'Try to get up',
     '3': 'Stay there',
-    }
+    },
     '1.1113':{
         'intro': 'You look at the man. And punch them.',
         'text': 'The man takes their phone out runs away and calls the police. What do you do?',

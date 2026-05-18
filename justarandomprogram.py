@@ -323,7 +323,13 @@ story = {
         '1': "Get Jiggy with it - trust i didn't make this - game dev?",
         '2': 'I KNEW IT HAAHAHAHHAHAHHA YOUR HANDBOOK SUCKS',
         '3': 'Tell them you accept their apology',
-    }
+    },
+        '1.1111111111111': {
+        'intro': 'The principal JOINS YOU and starts breakdancing.',
+        'text': 'is ducktape safe for keeping the poopy in? What do you say?',
+        '1': "Get Jiggy with it - trust i didn't make this - game dev?",
+        '2': 'I KNEW IT HAAHAHAHHAHAHHA YOUR HANDBOOK SUCKS',
+        '3': 'Tell them you accept their apology',
 
 
 

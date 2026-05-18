@@ -54,7 +54,7 @@ story = {
         'text': 'You woke up from your bed. What do you do?',
         '1': 'Go back asleep',
         '2': 'Get up',
-        '3': 'Scroll on your phone'
+        '3': 'Scroll on your phone',
         'image': '''
                 ---
                /• •\

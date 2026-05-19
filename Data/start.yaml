@@ -2,14 +2,11 @@ WakeUp:
   text: 'You woke up from your bed. What do you do?'
   textimage: InBedLayingUp
   choices:
-    1: 
-      text: 'Go back asleep'
+    - text: 'Go back asleep'
       result: GoBackAsleep
-    2: 
-      text: 'Get up'
+    - text: 'Get up'
       result: GetUpOutOfBed
-    3:
-      text: 'Scroll on your phone'
+    - text: 'Scroll on your phone'
       result: ScrollOnPhone
 GoBackAsleep:
   intro: 'You go back to bed and sleep longer'
@@ -17,12 +14,9 @@ GoBackAsleep:
   text: 'You woke up and noticed you have missed the bus. What do you do?'
   textimage: InBedScared
   choices:
-    1:
-      text: 'Ask mom for a ride'
+    - text: 'Ask mom for a ride'
       result: AskMomForARide
-    2:
-      text: 'Walk to school'
+    - text: 'Walk to school'
       result: WalkToSchool
-    3:
-      text: 'Skip school'
-      result:
+    - text: 'Skip school'
+      result: SkipSchool

@@ -1,0 +1,49 @@
+
+	// Place your pythonthingonalinuxchromebook workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	//
+	// You can also restrict snippets to specific files using include/exclude patterns:
+	// "Test snippet": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "test",
+	// 	"body": "test('$1', () => {\n\t$0\n});",
+	// 	"include": ["**/*.test.ts", "*.spec.ts"],
+	// 	"exclude": ["**/temp/*.ts"],
+	// 	"description": "Insert test block"
+	// }
+
+
+
+{
+  "Story Node Clean": {
+    "prefix": "node",
+    "body": [
+      "${1:NodeName}:",
+      "  intro: '${2:intro (optional)}'",
+      "  introimage: ${3:image (optional)}",
+      "  text: '${4:main text}'",
+      "  textimage: ${5:image}",
+      "  choices:",
+      "    - text: '${6:choice 1}'",
+      "      result: ${7:Result1}",
+      "    - text: '${8:choice 2}'",
+      "      result: ${9:Result2}",
+      "    - text: '${10:choice 3}'",
+      "      result: ${11:Result3}"
+    ]
+  }
+}

@@ -340,24 +340,25 @@ level = 'WakeUp'
 while True:
     with open('./Data/start.yaml', 'r') as file:
         data = yaml.safe_load(file)
-        try:
-            write(data[level]['intro'])
-            time.sleep(2)
-        except:
-            pass
-        try:
-            print(data[leve]['introimage'])
-        except:
-            pass
-        os.system('clear')
-        write(data[level]['text'])
-        try:
-            print(data[level]['textimage'])
-        except:
-            pass
-        choices = data[level]['choices']
-        for i in range(len(choices)):
-            print(f"{str(i+1)}) {choices[i]['text']}")
+    try:
+        write(data[level]['intro'])
+        time.sleep(2)
+    except:
+        pass
+    try:
+        print(data[leve]['introimage'])
+    except:
+        pass
+    os.system('clear')
+    write(data[level]['text'])
+    try:
+        with open('./Assets/' + data[level]['textimage'] + '.txt', 'r') as file:
+            print(file)
+    except:
+        pass
+    choices = data[level]['choices']
+    for i in range(len(choices)):
+        print(f"{str(i+1)}) {choices[i]['text']}")
 
 
     # elif answer.lower() == 's':

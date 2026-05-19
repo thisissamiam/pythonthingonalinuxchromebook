@@ -353,7 +353,7 @@ while True:
     write(data[level]['text'])
     try:
         with open('./Assets/' + data[level]['textimage'] + '.txt', 'r') as file:
-            print(file)
+            print(file.read)
     except:
         pass
     choices = data[level]['choices']

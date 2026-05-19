@@ -1,1 +1,13 @@
-wakeup:
+WakeUp:
+  text: 'You woke up from your bed. What do you do?'
+  'image': InBedLayingUp
+  choices:
+    1: 
+      text: 'Go back asleep'
+      result: GoBackAsleep
+    2: 
+      text: 'Get up'
+      result: GetUpOutOfBed
+    3:
+      text: 'Scroll on your phone'
+      result: ScrollOnPhone

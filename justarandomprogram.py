@@ -357,7 +357,7 @@ while True:
             pass
         choices = data[level]['choices']
         for i in range(len(choices)):
-            print(f"{str(i+1)}) {choices['text']}")
+            print(f"{str(i+1)}) {choices[i]['text']}")
 
 
     # elif answer.lower() == 's':

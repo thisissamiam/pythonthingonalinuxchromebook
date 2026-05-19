@@ -356,7 +356,7 @@ while True:
         except:
             pass
         for i in range(len(data[level]['choices'])):
-            print(f"{str(i)}) {data[level]['choices'][i]}")
+            print(f"{str(i+1)}) {data[level]['choices'][i]}")
 
 
     # elif answer.lower() == 's':

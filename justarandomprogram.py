@@ -355,7 +355,7 @@ while True:
             print(data[level]['textimage'])
         except:
             pass
-        for i in data[level][choices]:
+        for i in data[level]['choices']:
             print(i)
 
 

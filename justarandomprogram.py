@@ -355,8 +355,7 @@ while True:
             print(data[level]['textimage'])
         except:
             pass
-        for i in data[level]['choices']:
-            print(i)
+        print(range(data[level]['choices']))
 
 
     # elif answer.lower() == 's':

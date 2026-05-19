@@ -342,13 +342,13 @@ while True:
         data = yaml.safe_load(file)
         try:
             write(data[level]['intro'])
+            time.sleep(2)
         except:
             pass
         try:
             print(data[leve]['introimage'])
         except:
             pass
-        time.sleep(2)
         os.system('clear')
         write(data[level]['text'])
         try:

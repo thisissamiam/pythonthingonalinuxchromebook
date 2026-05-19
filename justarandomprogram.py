@@ -3,14 +3,14 @@ import random
 import os
 
 def write(input):
-    print()
-    total = ''
-    for i in input:
-        total += i
-        print(total)
-        num = (random.randint(1,2))*.10
-        time.sleep(num)
-        print('\033[A\033[A')
+    print(input)
+    # total = ''
+    # for i in input:
+    #     total += i
+    #     print(total)
+    #     num = (random.randint(1,2))*.10
+    #     time.sleep(num)
+    #     print('\033[A\033[A')
     print('')
 layer = '1'
 write('Hello!')
@@ -330,6 +330,7 @@ story = {
         '1': "Get Jiggy with it - trust i didn't make this - game dev?",
         '2': 'I KNEW IT HAAHAHAHHAHAHHA YOUR HANDBOOK SUCKS',
         '3': 'Tell them you accept their apology',
+      }
 
 
 
@@ -380,4 +381,3 @@ while True:
         write(layer)
         write('The previous message is your save code')
         exit()
-

@@ -17,6 +17,12 @@ GoBackAsleep:
   text: 'You woke up and noticed you have missed the bus. What do you do?'
   textimage: InBedScared
   choices:
-    1: 'Ask mom for a ride'
-    2: 'Walk to school'
-    3: 'Skip school'
+    1:
+      text: 'Ask mom for a ride'
+      result: AskMomForARide
+    2:
+      text: 'Walk to school'
+      result: WalkToSchool
+    3:
+      text: 'Skip school'
+      result:

@@ -20,3 +20,25 @@ GoBackAsleep:
       result: WalkToSchool
     - text: 'Skip school'
       result: SkipSchool
+GetUpOutOfBed:
+  intro: 'You get out of bed and get ready for the bus.'
+  introimage: OutOfBed
+  text: 'Do you go to school?'
+  textimage: NextToDoor
+  choices:
+    - text: 'Yes'
+      result: GoToSchool
+    - text: 'No'
+      result: StayHome
+ScrollOnPhone:
+  intro: 'You scroll on your phone'
+  introimage: ScrollOnPhone
+  text: 'Do you get ready for school?'
+  textimage: HoldingToothBrush
+  choices:
+    - text: 'choice 1'
+      result: Result1
+    - text: 'choice 2'
+      result: Result2
+    - text: 'choice 3'
+      result: Result3

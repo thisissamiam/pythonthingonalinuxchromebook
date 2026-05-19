@@ -341,11 +341,23 @@ while True:
     with open('./Data/start.yaml', 'r') as file:
         data = yaml.safe_load(file)
         try:
-            print(data[level]['intro'])
-            
+            write(data[level]['intro'])
+            try:
+                print(data[leve]['introimage'])
+            except:
+                pass
+            time.sleep(2)
+            os.system('clear')
+            write(data[level]['text'])
+            try:
+                print(data[level]['textimage'])
+            except:
+                pass
+            for i in data[level][choices]:
+                print(i)
         except:
             pass
-        print(data[level]['text'])
+        write(data[level]['text'])
 
     # elif answer.lower() == 's':
     #     write('Saving game...')

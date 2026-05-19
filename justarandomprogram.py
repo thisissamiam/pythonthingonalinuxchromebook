@@ -356,7 +356,7 @@ while True:
         except:
             pass
         for i in range(len(data[level]['choices'])):
-            print(i + ') ' + (data[level]['choices'][i]))
+            print(str(i) + ') ' + (data[level]['choices'][i]))
 
 
     # elif answer.lower() == 's':

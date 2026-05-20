@@ -350,7 +350,6 @@ while True:
         exit()
     try:
         write(data[level]['intro'])
-        time.sleep(2)
     except:
         pass
     try:
@@ -358,6 +357,7 @@ while True:
         print('data[level]' + ['introimage'])
     except:
         pass
+    time.sleep(2)
     os.system('clear')
     write(data[level]['text'])
     try:

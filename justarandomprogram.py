@@ -124,17 +124,18 @@ while True:
     print(str((len(choices))+1) + ') Stats')
     answer = input()
     try:
-        answer = int(answer)
-        answer -= 1
-        level = (choices[answer]['result'])
+        if answer.lower() == len(choices) + 1:
+            write('Your stats are...')
+        else:
+            answer = int(answer)
+            answer -= 1
+            level = (choices[answer]['result'])
     except:
         if answer.lower() == 's':
             write('Saving game...')
             write(level)
             write('The previous message is your save code')
             exit()
-        elif answer.lower() == len(choices) + 1:
-            write('Your stats are...')
         else:
             write("That's not a number!")
             exit(1)

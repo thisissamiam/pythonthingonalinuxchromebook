@@ -43,6 +43,7 @@ print(r'''
 answer = input()
 if answer.lower() == 'good':
   write('Perfect')
+  time.sleep(1)
   os.system('clear')
 else:
   write("You didn't follow the instructions. They may be cut off your screen. Try resizing your output/terminal")

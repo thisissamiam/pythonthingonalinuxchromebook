@@ -121,7 +121,7 @@ while True:
     choices = data[level]['choices']
     for i in range(len(choices)):
         print(f"{str(i+1)}) {choices[i]['text']}")
-    print(str(len(choices))+ ') Stats')
+    print(str((len(choices))+1) + ') Stats')
     answer = input()
     try:
         answer = int(answer)

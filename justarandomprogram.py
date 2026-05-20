@@ -65,6 +65,7 @@ elif answer != 'n':
     exit(0)
 # will only run if answer is no or when the instructions finish
 write('Do you have a save file to load from? (y,n)')
+level = 'WakeUp' # need to put it anywhere before save and must run so it doesn't get overwriten
 answer = input()
 if answer == 'y':
   write('Please paste your save code.')
@@ -338,9 +339,11 @@ else:
 # }
 with open('./Data/start.yaml', 'r') as file:
         data = yaml.safe_load(file)
-
-level = 'WakeUp'
 while True:
+    try:
+        type(data[level])
+    except:
+        write(f"data[level] Does not exist")
     try:
         write(data[level]['intro'])
         time.sleep(2)

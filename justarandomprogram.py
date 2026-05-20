@@ -343,7 +343,7 @@ while True:
     try:
         type(data[level])
     except:
-        write(f"data[level] Does not exist")
+        write(f"{data[level]} Does not exist")
         exit()
     try:
         write(data[level]['intro'])

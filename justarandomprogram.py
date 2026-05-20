@@ -351,6 +351,7 @@ while True:
         data[level]
     except:
         write(f"Error: {level} does not exist in yaml")
+        write('This probally means the game ended, but this should not happen in the release.')
         exit()
     try:
         write(data[level]['intro'])

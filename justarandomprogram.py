@@ -358,7 +358,8 @@ while True:
     except:
         intro = False
     try:
-        print(data[level]['introimage'])
+        with open('./Assets/'+ data[level]['introimage'].txt, 'r') as file:
+            print(file.read())
         time.sleep(2)
     except:
         if intro:

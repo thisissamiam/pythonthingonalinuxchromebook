@@ -14,6 +14,7 @@ def write(input):
     #     print('\033[A\033[A')
     print('')
 layer = '1'
+os.system('clear')
 write('Hello!')
 write('Welcome')
 write('to...')

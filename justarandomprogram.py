@@ -355,6 +355,7 @@ while True:
         pass
     try:
         print(data[level]['introimage'])
+        print('data[level]' + ['introimage'])
     except:
         pass
     os.system('clear')

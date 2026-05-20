@@ -366,7 +366,7 @@ while True:
     except:
         write("That's not a number!")
         exit(1)
-    write(choices[answer])
+    level = (choices[answer]['result'])
 
 
 

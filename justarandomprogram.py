@@ -20,6 +20,8 @@ def write(input):
         time.sleep(num)
         print('\033[A\033[A')
     print('')
+def userinput(string):
+    return(input('>>> ' + string))
 layer = '1'
 os.system('clear')
 write('Hello!')
@@ -50,7 +52,7 @@ print(r'''
 skip = False
 loadedfromsave = False # avoid not defined error
 level = 'WakeUp' # need to put it anywhere before save and must run so it doesn't get overwriten
-answer = input()
+answer = userinput()
 if answer.lower() == 'good':
   write('Perfect')
   time.sleep(1)

@@ -41,6 +41,7 @@ print(r'''
 █                                                                            █
 ██████████████████████████████████████████████████████████████████████████████''')
 skip = False
+loadedfromsave = False # avoid not defined error
 level = 'WakeUp' # need to put it anywhere before save and must run so it doesn't get overwriten
 answer = input()
 if answer.lower() == 'good':
@@ -78,6 +79,7 @@ if not skip:
         write('Please paste your save code.')
         answer = input()
         level = answer
+        loadedfromsave = True
     elif answer == 'n':
         write('Ok, starting a new game')
         os.system('clear')
@@ -351,7 +353,10 @@ while True:
         data[level]
     except:
         write(f"Error: {level} does not exist in yaml")
-        write('This probally means the game ended, but this should not happen in the release.')
+        if loadedfromsave:
+            write('Bad save file.')
+        else:
+            write('This probally means the game ended, but this should not happen in the release.')
         exit()
     try:
         write(data[level]['intro'])

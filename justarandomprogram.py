@@ -4,7 +4,7 @@ import os
 import yaml
 
 def write(input):
-    # print(input)
+    print()
     total = ''
     for i in input:
         total += i

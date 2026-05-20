@@ -82,6 +82,7 @@ if not skip:
         loadedfromsave = True
     elif answer == 'n':
         write('Ok, starting a new game')
+        time.sleep(1)
         os.system('clear')
     else:
         exit()
@@ -120,6 +121,7 @@ while True:
     choices = data[level]['choices']
     for i in range(len(choices)):
         print(f"{str(i+1)}) {choices[i]['text']}")
+    print('Stats')
     answer = input()
     try:
         answer = int(answer)
@@ -130,6 +132,8 @@ while True:
             write(level)
             write('The previous message is your save code')
             exit()
+        elif answer.lower() == 'stats':
+            write('Your stats are...')
         else:
             write("That's not a number!")
             exit(1)

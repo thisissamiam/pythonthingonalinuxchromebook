@@ -121,21 +121,21 @@ while True:
     choices = data[level]['choices']
     for i in range(len(choices)):
         print(f"{str(i+1)}) {choices[i]['text']}")
-    print('Stats')
+    print(len(choices)+ ') Stats')
     answer = input()
     try:
         answer = int(answer)
         answer -= 1
+        level = (choices[answer]['result'])
     except:
         if answer.lower() == 's':
             write('Saving game...')
             write(level)
             write('The previous message is your save code')
             exit()
-        elif answer.lower() == 'stats':
+        elif answer.lower() == len(choices) + 1:
             write('Your stats are...')
         else:
             write("That's not a number!")
             exit(1)
     os.system('clear')
-    level = (choices[answer]['result'])

@@ -64,7 +64,7 @@ else:
   exit()
 if not skip:
     write('Do you want the instructions? (y,n)')
-    answer = input()
+    answer = userinput()
     if answer == 'y':
         os.system('clear')
         write('-----------------')
@@ -83,10 +83,10 @@ if not skip:
         exit(0)
     # will only run if answer is no or when the instructions finish
     write('Do you have a save file to load from? (y,n)')
-    answer = input()
+    answer = userinput()
     if answer == 'y':
         write('Please paste your save code.')
-        answer = input()
+        answer = userinput()
         level = answer
         loadedfromsave = True
     elif answer == 'n':
@@ -131,7 +131,7 @@ while True:
     for i in range(len(choices)):
         write(f"{str(i+1)}) {choices[i]['text']}")
     write(str((len(choices))+1) + ') Stats')
-    answer = input()
+    answer = userinput()
     try:
             answer = int(answer)
             if answer == len(choices) + 1:
@@ -144,7 +144,7 @@ while True:
                 write(f'Evasion:  {PlayerEvasion}')
                 print()
                 write('Press enter to continue.')
-                input()
+                userinput()
             else:
                 answer -= 1
                 level = (choices[answer]['result'])

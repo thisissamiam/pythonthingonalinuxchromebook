@@ -124,13 +124,13 @@ NapOnDesk:
   text: 'The principal asks you what happened. What do you say?'
   choices:
     - text: 'You pull out a handbook, and act like you know everything in it, and say that it says that if a student has sleep deprivation, then you can nap'
-      result: FakeHandbookRule
+      result: HandbookRule
     - text: 'Lie'
       result: LieToPrincipal
     - text: 'IM SORRY IM SORRY IM SORRY *start crying*'
       result: Crying
 
-FakeHandbookRule:
+HandbookRule:
   intro: 'The principal looks at you, and looks at the handbook.'
   text: 'The principal agrees, and says they are sorry. What do you say?'
   choices:

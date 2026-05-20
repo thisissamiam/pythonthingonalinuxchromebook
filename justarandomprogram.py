@@ -358,7 +358,7 @@ while True:
     except:
         intro = False
     try:
-        print(data[level][introimage])
+        print(data[level]['introimage'])
         time.sleep(2)
     except:
         if intro:

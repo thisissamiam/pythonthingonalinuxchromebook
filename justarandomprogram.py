@@ -125,7 +125,7 @@ while True:
     answer = input()
     try:
             answer = int(answer)
-            if answer.lower() == len(choices) + 1:
+            if answer == len(choices) + 1:
                 write('Your stats are...')
             else:
                 answer -= 1

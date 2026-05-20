@@ -360,6 +360,14 @@ while True:
     for i in range(len(choices)):
         print(f"{str(i+1)}) {choices[i]['text']}")
     answer = input()
+    try:
+        answer = int(answer)
+        answer -= 1
+    except:
+        write("That's not a number!")
+        exit(1)
+    write(choices[answer])
+
 
 
     # elif answer.lower() == 's':

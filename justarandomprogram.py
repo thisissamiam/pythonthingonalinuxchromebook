@@ -355,7 +355,6 @@ while True:
         pass
     try:
         print(data[leve]['introimage'])
-        print()
     except:
         pass
     os.system('clear')
@@ -363,6 +362,7 @@ while True:
     try:
         with open('./Assets/' + data[level]['textimage'] + '.txt', 'r') as file:
             print(file.read())
+            print()
     except:
         pass
     choices = data[level]['choices']

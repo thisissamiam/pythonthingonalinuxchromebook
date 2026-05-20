@@ -8,6 +8,7 @@ WakeUp:
       result: GetUpOutOfBed
     - text: 'Scroll on your phone'
       result: ScrollOnPhone
+
 GoBackAsleep:
   intro: 'You go back to bed and sleep longer'
   introimage: InBedLayingDown
@@ -20,6 +21,180 @@ GoBackAsleep:
       result: WalkToSchool
     - text: 'Skip school'
       result: SkipSchool
+
+AskMomForARide:
+  intro: 'You get up and find mom. She sees you and yells at you that you missed the bus. You ask her for a ride.'
+  text: 'She says she has to go to work, and told you to figure it out yourself. What do you do?'
+  choices:
+    - text: 'Walk to school'
+      result: AskMomWalkToSchool
+    - text: 'Knock on other peoples doors untill one can give you a ride'
+      result: KnockOnDoors
+    - text: 'Skip school'
+      result: SkipSchool
+
+AskMomWalkToSchool:
+  intro: 'You grab your stuff and go out the door. You notice a man nearby.'
+  text: 'The man wanted to talk to you. What do you do?'
+  choices:
+    - text: 'Talk to the man'
+      result: TalkToMan
+    - text: 'Tell them that you need to walk to school and you are late'
+      result: IgnoreMan
+    - text: 'Punch them in the face'
+      result: PunchMan
+
+TalkToMan:
+  intro: 'The man tells you that they have seen you before, and talks about life as he waters his plants.'
+  text: 'The man asks you if you could fill up his watering can. What do you do?'
+  choices:
+    - text: 'Tell them you would love to but you really need to go'
+      result: LeaveMan
+    - text: 'Tell them sure, and help them fill up their watering can'
+      result: HelpMan
+    - text: 'Take the watering can from them and throw it'
+      result: ThrowWateringCan
+
+LeaveMan:
+  intro: 'The man said that was fine, and told you that they would be happy to see you later.'
+  text: 'You start walking to school, and look at your watch. You are 10 minutes late. What do you do?'
+  choices:
+    - text: 'Start running to school'
+      result: RunToSchool
+    - text: 'Eat out at a fast food place'
+      result: EatFastFood
+    - text: 'Keep walking how you were before'
+      result: KeepWalking
+
+RunToSchool:
+  intro: 'You start running to school as fast as you can.'
+  text: 'As you are running, your backpack is very heavy and is making it hard to run. What do you do?'
+  choices:
+    - text: 'Take off the backpack and forget about it so you can run faster'
+      result: DropBackpack
+    - text: 'Accept you will be a little late and start walking'
+      result: WalkInstead
+    - text: 'Keep running as is'
+      result: KeepRunning
+
+DropBackpack:
+  intro: 'You take off the backpack, throw it into a bush and keep running'
+  text: 'As you are running you need a drink. What do you do?'
+  choices:
+    - text: 'Keep running to school'
+      result: KeepRunningThirsty
+    - text: 'Go back to the backpack and get your waterbottle'
+      result: GetWaterBottle
+    - text: 'Walk the rest'
+      result: WalkRest
+
+KeepRunningThirsty:
+  intro: 'You fought through the thirst and kept running'
+  text: 'You make it to school, but you are unsure of what to do next. What do you do?'
+  choices:
+    - text: 'Sneak in school so you are not marked late'
+      result: SneakIntoSchool
+    - text: 'Go in the main office to declare you are late'
+      result: MainOffice
+
+SneakIntoSchool:
+  intro: 'You find your way in, but you run into a teacher.'
+  text: 'The teacher asks are you late for school. What do you do?'
+  choices:
+    - text: 'Tell them that you were late'
+      result: AdmitLate
+    - text: 'Ignore them and push them out of the way'
+      result: PushTeacher
+    - text: 'Lie and say you are not late'
+      result: LieToTeacher
+
+AdmitLate:
+  intro: 'The teacher is accepting and marks you as on time, and you walk to your first class.'
+  text: 'You feel tired and want to take a nap, what do you do?'
+  choices:
+    - text: 'Take the nap on your desk'
+      result: NapOnDesk
+    - text: 'Sneak out after attendance so you can take a nap elsewhere'
+      result: SneakOutNap
+    - text: 'Pay attention and do not take a nap'
+      result: StayAwake
+
+NapOnDesk:
+  intro: 'The teacher notices and sends you to the office'
+  text: 'The principal asks you what happened. What do you say?'
+  choices:
+    - text: 'You pull out a handbook, and act like you know everything in it, and say that it says that if a student has sleep deprivation, then you can nap'
+      result: FakeHandbookRule
+    - text: 'Lie'
+      result: LieToPrincipal
+    - text: 'IM SORRY IM SORRY IM SORRY *start crying*'
+      result: Crying
+
+FakeHandbookRule:
+  intro: 'The principal looks at you, and looks at the handbook.'
+  text: 'The principal agrees, and says they are sorry. What do you say?'
+  choices:
+    - text: 'Get Jiggy with it - trust i didnt make this - game dev?'
+      result: BreakdanceEnding
+    - text: 'I KNEW IT HAAHAHAHHAHAHHA YOUR HANDBOOK SUCKS'
+      result: EvilLaughEnding
+    - text: 'Tell them you accept their apology'
+      result: AcceptApology
+
+BreakdanceEnding:
+  intro: 'The principal JOINS YOU and starts breakdancing.'
+  text: 'is ducktape safe for keeping the poopy in? What do you say?'
+  choices:
+    - text: 'Get Jiggy with it - trust i didnt make this - game dev?'
+      result: JokeEnding1
+    - text: 'I KNEW IT HAAHAHAHHAHAHHA YOUR HANDBOOK SUCKS'
+      result: JokeEnding2
+    - text: 'Tell them you accept their apology'
+      result: JokeEnding3
+
+PunchMan:
+  intro: 'You look at the man. And punch them.'
+  text: 'The man takes their phone out runs away and calls the police. What do you do?'
+  choices:
+    - text: 'Follow the man'
+      result: FollowMan
+    - text: 'Run away'
+      result: RunFromPolice
+    - text: 'Stay put'
+      result: StayPut
+
+FollowMan:
+  intro: 'You follow the man.'
+  text: 'He goes inside his house. What do you do?'
+  choices:
+    - text: 'Go inside his house'
+      result: EnterHouse
+    - text: 'Go to school'
+      result: GoToSchoolAfterPunch
+
+EnterHouse:
+  intro: 'You follow him inside his house.'
+  text: 'The man was a murderer. What do you do?'
+  choices:
+    - text: 'FIGHT BACK'
+      result: FightMurderer
+    - text: 'Give up'
+      result: GiveUpToMurderer
+
+FightMurderer:
+  intro: 'You fight back.'
+  text: 'They kill you'
+  choices:
+    - text: 'You died. This choice does not work'
+      result: End
+
+GiveUpToMurderer:
+  intro: 'You give up.'
+  text: 'They kill you even after you surrender'
+  choices:
+    - text: 'You died. This choice does not work'
+      result: End
+
 GetUpOutOfBed:
   intro: 'You get out of bed and get ready for the bus.'
   introimage: OutOfBed
@@ -30,226 +205,32 @@ GetUpOutOfBed:
       result: GoToSchool
     - text: 'No'
       result: StayHome
+
+GoToSchool:
+  intro: 'You decide to go to school'
+  text: 'Where do you want to sit on the bus?'
+  choices:
+    - text: 'Next to someone'
+      result: SitNextToSomeone
+    - text: 'Alone'
+      result: SitAlone
+
+StayHome:
+  intro: 'You decide that you do not want to go to school'
+  text: 'Play video games?'
+  choices:
+    - text: 'No'
+      result: DontPlayGames
+    - text: 'Yes'
+      result: PlayGames
+
 ScrollOnPhone:
   intro: 'You scroll on your phone'
   introimage: ScrollOnPhone
   text: 'Do you get ready for school?'
   textimage: HoldingToothBrush
   choices:
-    - text: 'choice 1'
-      result: Result1
-    - text: 'choice 2'
-      result: Result2
-    - text: 'choice 3'
-      result: Result3
-'1':
-  '1': Go back asleep
-  '2': Get up
-  '3': Scroll on your phone
-  image: InBedLayingUp
-  text: You woke up from your bed. What do you do?
-'1.1':
-  '1': Ask mom for a ride
-  '2': Walk to school
-  '3': Skip school
-  intro: You go back to bed and sleep longer
-  introimage: "\n               /\u203E\\\n              |\u2022 \u2510|\n       \
-    \       |  \u2502\u251C\u2550\u2557\n          \u2588\u2588  |\u2022 \u2518| \u255A\
-    \u2557           \u250C\u2500\n          \u2588\u2588   \\_/   \u255A\u2550\u2550\
-    \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\n          \u2588\
-    \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\
-    \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\
-    \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\
-    \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\
-    \u2588\u2588\n          \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\
-    \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\
-    \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\
-    \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\
-    \u2588\u2588\u2588\u2588\u2588\u2588\u2588\n            \u2588\u2588         \
-    \                                      \u2588\u2588\n            \u2588\u2588\
-    \                                               \u2588\u2588\n            \u2588\
-    \u2588                                               \u2588\u2588"
-  text: You woke up and noticed you have missed the bus. What do you do?
-'1.11':
-  '1': Walk to school
-  '2': Knock on other peoples doors untill one can give you a ride
-  '3': Skip school
-  intro: You get up and find mom. She sees you and yells at you that you missed the
-    bus. You ask her for a ride.
-  text: She says she has to go to work, and told you to figure it out yourself. What
-    do you do?
-'1.111':
-  '1': Talk to the man
-  '2': Tell them that you need to walk to school and you are late
-  '3': Punch them in the face
-  intro: You grab your stuff and go out the door. You notice a man nearby.
-  text: The man wanted to talk to you. What do you do?
-'1.1111':
-  '1': Tell them you would love to but you really need to go
-  '2': Tell them sure, and help them fill up their watering can
-  '3': Take the watering can from them and throw it
-  intro: The man tells you that they have seen you before, and talks about life as
-    he waters his plants.
-  text: The man asks you if you could fill up his watering can. What do you do?
-'1.11111':
-  '1': Start running to school
-  '2': Eat out at a fast food place
-  '3': keep walking how you were before
-  intro: The man said that was fine, and told you that they would be happy to see
-    you later.
-  text: You start walking to school, and look at your watch. You are 10 minutes late.
-    What do you do?
-'1.111111':
-  '1': Take off the backpack and forget about it so you can run faster
-  '2': Accept you will be a little late and start walking
-  '3': Keep running as is
-  intro: You start running to school as fast as you can.
-  text: As you are running, your backpack is very heavy and is making it hard to run.
-    What do you do?
-'1.1111111':
-  '1': Keep running to school
-  '2': Go back to the backpack and get your waterbottle
-  '3': Walk the rest
-  intro: You take off the backpack, throw it into a bush and keep running
-  text: As you are running you need a drink. What do you do?
-'1.11111111':
-  '1': Sneak in school so you aren't marked late
-  '2': Go in the main office to declare you are late
-  intro: You fought through the thirst and kept running
-  text: You make it to school, but you are unsure of what to do next. What do you
-    do?
-'1.111111111':
-  '1': Tell them that you were late
-  '2': Ignore them and push them out of the way
-  '3': Lie and say you are not late
-  intro: You find your way in, but you run into a teacher.
-  text: The teacher asks you are you late for school. What do you do?
-'1.1111111111':
-  '1': Take the nap on your desk
-  '2': Sneak out after attendance so you can take a nap elsewhere
-  '3': Pay attention and don't take a nap
-  intro: The teacher is accepting and marks you as on time, and you walk to your first
-    class.
-  text: You feel tired and want to take a nap, what do you do?
-'1.11111111111':
-  '1': You pull out a handbook, and act like you know everything in it, and say that
-    it says that if a student has sleep deprivation, then you can nap
-  '2': Lie.
-  '3': IM SORRY IM SORRY IM SORRY *start crying*
-  intro: The teacher notices and sends you to the office
-  text: The principal asks you what happened. What do you say?
-'1.111111111111':
-  '1': Get Jiggy with it - trust i didn't make this - game dev?
-  '2': I KNEW IT HAAHAHAHHAHAHHA YOUR HANDBOOK SUCKS
-  '3': Tell them you accept their apology
-  intro: The principal looks at you, and looks at the handbook.
-  text: The principal agrees, and says they are sorry. What do you say?
-'1.1111111111111':
-  '1': Get Jiggy with it - trust i didn't make this - game dev?
-  '2': I KNEW IT HAAHAHAHHAHAHHA YOUR HANDBOOK SUCKS
-  '3': Tell them you accept their apology
-  intro: The principal JOINS YOU and starts breakdancing.
-  text: is ducktape safe for keeping the poopy in? What do you say?
-'1.1113':
-  '1': Follow the man
-  '2': Run away
-  '3': Stay put
-  intro: You look at the man. And punch them.
-  text: The man takes their phone out runs away and calls the police. What do you
-    do?
-'1.11131':
-  '1': Go inside his house
-  '2': Go to school
-  intro: You follow the man.
-  text: He goes inside his house. What do you do?
-'1.111311':
-  '1': FIGHT BACK
-  '2': Give up
-  intro: You follow him inside his house.
-  text: The man was a murderer. What do you do?
-'1.1113111':
-  '1': You died. This choice does not work
-  intro: You fight back.
-  text: They kill you
-'1.1113112':
-  '1': You died. This choice does not work
-  intro: You give up.
-  text: They kill you even after you surrender
-'1.111312':
-  '1': Hide
-  '2': Give up
-  intro: You go to school normally.
-  text: The police find you in school. What do you do?
-'1.1113121':
-  '1': You got arrested. This choice does not work.
-  intro: You hide from the police and they cannot find you.
-  text: You were in the clear, but a kid sniched on you, and the police arrest you
-'1.1113122':
-  '1': You were arrested. This choise does not work
-  intro: You give up.
-  text: The police arrest you.
-'1.11132':
-  '1': Evade
-  '2': Try to fight them
-  intro: You run away.
-  text: Eventually, the police find you. What do you do?
-'1.111321':
-  '1': You died. This choice does not work
-  intro: You attempt to run away from you.
-  text: Eventually, the police catch up with you, and you trip and fall on a rock
-'1.111322':
-  '1': You died. This choice does not work
-  intro: You fight the police.
-  text: You lose the fight
-'1.11133':
-  '1': Lie
-  '2': Tell the truth
-  intro: You stay put and let the police come.
-  text: The police come and ask you what happend. What do you do?
-'1.111331':
-  '1': Try to resist
-  '2': Put your hands behind your back
-  intro: You lie to the police.
-  text: The police don't belive your lie and tell you to put your hands behind you
-    back. What do you do?
-'1.1113311':
-  '1': You died. This choice does not work.
-  intro: You try to resist.
-  text: They tase you and you fall onto the ground but you die
-'1.1113312':
-  '1': You got arrested. This choice does not work.
-  intro: You got arrested
-  text: They arrest you and now you are useless in life
-'1.112':
-  '1': Call for help
-  '2': Try to get up
-  '3': Stay there
-  intro: You go out the door pass a man, and start knocking on doors.
-  text: You knock on someones door and they shove you and close the door. You are
-    bleeding out. What do you do?
-'1.1121':
-  '1': Call for help
-  '2': Try to get up
-  '3': Stay there
-  intro: You call for help and someone comes and calls 911.
-  text: You do not survive in the hospital.
-'1.2':
-  '1': 'No'
-  '2': 'Yes'
-  intro: You get out of bed and get ready for the bus
-  text: Do you go to school?
-'1.21':
-  '1': 'No'
-  '2': 'Yes'
-  intro: You decide that you don't want to go to school
-  text: Play video games?
-'1.22':
-  '1': Next to someone
-  '2': Alone
-  intro: You decide to go to school
-  text: Where do you want to sit on the bus?
-'1.3':
-  '1': 'No'
-  '2': 'Yes'
-  intro: You scroll on your phone
-  text: Do you get ready for school?
+    - text: 'No'
+      result: KeepScrolling
+    - text: 'Yes'
+      result: GetReadyAfterPhone

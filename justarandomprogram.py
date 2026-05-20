@@ -42,7 +42,8 @@ print(r'''
 ██████████████████████████████████████████████████████████████████████████████''')
 answer = input()
 if answer.lower() == 'good':
-  write('Good.')
+  write('Perfect')
+  os.system('clear')
 else:
   write("You didn't follow the instructions. They may be cut off your screen. Try resizing your output/terminal")
   exit()

@@ -336,10 +336,11 @@ else:
 
 
 # }
+with open('./Data/start.yaml', 'r') as file:
+        story = yaml.safe_load(file)
+
 level = 'WakeUp'
 while True:
-    with open('./Data/start.yaml', 'r') as file:
-        data = yaml.safe_load(file)
     try:
         write(data[level]['intro'])
         time.sleep(2)

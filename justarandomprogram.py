@@ -382,7 +382,7 @@ while True:
     except:
         if answer.lower() == 's':
             write('Saving game...')
-            write(layer)
+            write(level)
             write('The previous message is your save code')
             exit()
         else:

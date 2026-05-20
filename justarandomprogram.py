@@ -4,14 +4,14 @@ import os
 import yaml
 
 def write(input):
-    print(input)
-    # total = ''
-    # for i in input:
-    #     total += i
-    #     print(total)
-    #     num = (random.randint(1,2))*.10
-    #     time.sleep(num)
-    #     print('\033[A\033[A')
+    # print(input)
+    total = ''
+    for i in input:
+        total += i
+        print(total)
+        num = (random.randint(0,1))*.10
+        time.sleep(num)
+        print('\033[A\033[A')
     print('')
 layer = '1'
 os.system('clear')
@@ -77,7 +77,7 @@ if not skip:
     if answer == 'y':
         write('Please paste your save code.')
         answer = input()
-        layer = answer
+        level = answer
     elif answer == 'n':
         write('Ok, starting a new game')
         os.system('clear')

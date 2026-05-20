@@ -124,12 +124,12 @@ while True:
     print(str((len(choices))+1) + ') Stats')
     answer = input()
     try:
-        if answer.lower() == len(choices) + 1:
-            write('Your stats are...')
-        else:
             answer = int(answer)
-            answer -= 1
-            level = (choices[answer]['result'])
+            if answer.lower() == len(choices) + 1:
+                write('Your stats are...')
+            else:
+                answer -= 1
+                level = (choices[answer]['result'])
     except:
         if answer.lower() == 's':
             write('Saving game...')

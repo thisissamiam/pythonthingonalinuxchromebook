@@ -345,53 +345,53 @@ story = {
 }
 print(yaml.dump(story))
 
-with open('./Data/start.yaml', 'r') as file:
-        data = yaml.safe_load(file)
-while True:
-    try:
-        data[level]
-    except:
-        write(f"Error: {level} does not exist in yaml")
-        if loadedfromsave:
-            write('Bad save file.')
-        else:
-            write('This probally means the game ended, but this should not happen in the release.')
-        exit()
-    try:
-        write(data[level]['intro'])
-        intro = True
-    except:
-        intro = False
-    try:
-        with open('./Assets/'+ data[level]['introimage']+ '.txt', 'r') as file:
-            print(file.read())
-        time.sleep(2)
-    except:
-        if intro:
-            time.sleep(2)
-    os.system('clear')
-    write(data[level]['text'])
-    try:
-        with open('./Assets/' + data[level]['textimage'] + '.txt', 'r') as file:
-            print(file.read())
-            print()
-    except:
-        pass
-    choices = data[level]['choices']
-    for i in range(len(choices)):
-        print(f"{str(i+1)}) {choices[i]['text']}")
-    answer = input()
-    try:
-        answer = int(answer)
-        answer -= 1
-    except:
-        if answer.lower() == 's':
-            write('Saving game...')
-            write(level)
-            write('The previous message is your save code')
-            exit()
-        else:
-            write("That's not a number!")
-            exit(1)
-    os.system('clear')
-    level = (choices[answer]['result'])
+# with open('./Data/start.yaml', 'r') as file:
+#         data = yaml.safe_load(file)
+# while True:
+#     try:
+#         data[level]
+#     except:
+#         write(f"Error: {level} does not exist in yaml")
+#         if loadedfromsave:
+#             write('Bad save file.')
+#         else:
+#             write('This probally means the game ended, but this should not happen in the release.')
+#         exit()
+#     try:
+#         write(data[level]['intro'])
+#         intro = True
+#     except:
+#         intro = False
+#     try:
+#         with open('./Assets/'+ data[level]['introimage']+ '.txt', 'r') as file:
+#             print(file.read())
+#         time.sleep(2)
+#     except:
+#         if intro:
+#             time.sleep(2)
+#     os.system('clear')
+#     write(data[level]['text'])
+#     try:
+#         with open('./Assets/' + data[level]['textimage'] + '.txt', 'r') as file:
+#             print(file.read())
+#             print()
+#     except:
+#         pass
+#     choices = data[level]['choices']
+#     for i in range(len(choices)):
+#         print(f"{str(i+1)}) {choices[i]['text']}")
+#     answer = input()
+#     try:
+#         answer = int(answer)
+#         answer -= 1
+#     except:
+#         if answer.lower() == 's':
+#             write('Saving game...')
+#             write(level)
+#             write('The previous message is your save code')
+#             exit()
+#         else:
+#             write("That's not a number!")
+#             exit(1)
+#     os.system('clear')
+#     level = (choices[answer]['result'])

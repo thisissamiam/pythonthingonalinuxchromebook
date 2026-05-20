@@ -361,7 +361,8 @@ while True:
         with open('./Assets/'+ data[level]['introimage'].txt, 'r') as file:
             print(file.read())
         time.sleep(2)
-    except:
+    except Exception as e:
+        print(e)
         if intro:
             time.sleep(2)
     os.system('clear')

@@ -350,14 +350,15 @@ while True:
         exit()
     try:
         write(data[level]['intro'])
+        intro = True
     except:
-        pass
+        intro = False
     try:
         print(data[level]['introimage'])
         print('data[level]' + ['introimage'])
     except:
-        pass
-    time.sleep(2)
+        if intro:
+            time.sleep(2)
     os.system('clear')
     write(data[level]['text'])
     try:

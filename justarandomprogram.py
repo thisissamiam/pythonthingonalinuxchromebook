@@ -337,7 +337,7 @@ else:
 
 # }
 with open('./Data/start.yaml', 'r') as file:
-        story = yaml.safe_load(file)
+        data = yaml.safe_load(file)
 
 level = 'WakeUp'
 while True:

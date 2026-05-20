@@ -343,7 +343,7 @@ while True:
     try:
         data[level]
     except:
-        write(f"{level} Does not exist")
+        write(f"Error: {level} does not exist in yaml")
         exit()
     try:
         write(data[level]['intro'])

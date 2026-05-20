@@ -342,10 +342,9 @@ if not skip:
 #         '2': 'I KNEW IT HAAHAHAHHAHAHHA YOUR HANDBOOK SUCKS',
 #         '3': 'Tell them you accept their apology',
 #       }
-
-
-
 # }
+
+
 with open('./Data/start.yaml', 'r') as file:
         data = yaml.safe_load(file)
 while True:

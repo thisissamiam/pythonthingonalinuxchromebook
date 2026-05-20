@@ -3,6 +3,13 @@ import random
 import os
 import yaml
 
+# Player Defines
+PlayerHealth = 20
+PlayerAttack = 1
+PlayerSpeed = 1
+PlayerAccuracy = 10
+PlayerEvasion = 0
+
 def write(input):
     print()
     total = ''
@@ -127,6 +134,12 @@ while True:
             answer = int(answer)
             if answer == len(choices) + 1:
                 write('Your stats are...')
+                write('Health:', + PlayerHealth)
+                write('Attack', + PlayerAttack)
+                write('Speed', + PlayerSpeed)
+                write('Accuracy', + PlayerAccuracy)
+                write('Evasion', + PlayerEvasion)
+                time.sleep(1)
             else:
                 answer -= 1
                 level = (choices[answer]['result'])

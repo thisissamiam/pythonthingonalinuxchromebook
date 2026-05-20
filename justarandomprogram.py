@@ -375,6 +375,8 @@ while True:
     except:
         write("That's not a number!")
         exit(1)
+    time.sleep(2)
+    os.system('clear')
     level = (choices[answer]['result'])
 
 

@@ -358,11 +358,10 @@ while True:
     except:
         intro = False
     try:
-        with open('./Assets/'+ data[level]['introimage'].txt, 'r') as file:
+        with open('./Assets/'+ data[level]['introimage']+ '.txt', 'r') as file:
             print(file.read())
         time.sleep(2)
-    except Exception as e:
-        print(e)
+    except:
         if intro:
             time.sleep(2)
     os.system('clear')

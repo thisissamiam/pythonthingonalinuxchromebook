@@ -380,15 +380,13 @@ while True:
         answer = int(answer)
         answer -= 1
     except:
-        write("That's not a number!")
-        exit(1)
+        if answer.lower() == 's':
+            write('Saving game...')
+            write(layer)
+            write('The previous message is your save code')
+            exit()
+        else:
+            write("That's not a number!")
+            exit(1)
     os.system('clear')
     level = (choices[answer]['result'])
-
-
-
-    # elif answer.lower() == 's':
-    #     write('Saving game...')
-    #     write(layer)
-    #     write('The previous message is your save code')
-    #     exit()

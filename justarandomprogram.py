@@ -139,7 +139,9 @@ while True:
                 write('Speed', + PlayerSpeed)
                 write('Accuracy', + PlayerAccuracy)
                 write('Evasion', + PlayerEvasion)
-                time.sleep(1)
+                print()
+                write('Press enter to continue.')
+                input()
             else:
                 answer -= 1
                 level = (choices[answer]['result'])

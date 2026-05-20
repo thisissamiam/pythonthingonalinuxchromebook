@@ -20,7 +20,7 @@ def write(input):
         time.sleep(num)
         print('\033[A\033[A')
     print('')
-def userinput(string):
+def userinput(string=''):
     return(input('>>> ' + string))
 layer = '1'
 os.system('clear')

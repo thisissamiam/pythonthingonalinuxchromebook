@@ -341,9 +341,9 @@ with open('./Data/start.yaml', 'r') as file:
         data = yaml.safe_load(file)
 while True:
     try:
-        type(data[level])
+        data[level]
     except:
-        write(f"{data[level]} Does not exist")
+        write(f"{level} Does not exist")
         exit()
     try:
         write(data[level]['intro'])

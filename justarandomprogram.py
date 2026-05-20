@@ -133,6 +133,7 @@ while True:
     try:
             answer = int(answer)
             if answer == len(choices) + 1:
+                os.system('clear')
                 write('Your stats are...')
                 write(f'Health: {PlayerHealth}')
                 write(f'Attack: {PlayerAttack}')

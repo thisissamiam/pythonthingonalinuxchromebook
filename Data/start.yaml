@@ -12,6 +12,8 @@ WakeUp:
 GoBackAsleep:
   intro: 'You go back to bed and sleep longer'
   introimage: InBedLayingDown
+  stats:
+    - 
   text: 'You woke up and noticed you have missed the bus. What do you do?'
   textimage: InBedScared
   choices:

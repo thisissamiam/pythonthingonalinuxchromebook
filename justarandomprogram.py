@@ -6,9 +6,9 @@ import yaml
 # Player Defines
 PlayerHealth = 20
 PlayerAttack = 1
+PlayerSoulPoint = 20
 PlayerSpeed = 1
-PlayerAccuracy = 10
-PlayerEvasion = 0
+PlayerIntelligence = 10
 
 def write(input):
     print()
@@ -139,9 +139,9 @@ while True:
                 write('Your stats are...')
                 write(f'Health: {PlayerHealth}')
                 write(f'Attack: {PlayerAttack}')
-                write(f'Speed: {PlayerSpeed}')
-                write(f'Accuracy: {PlayerAccuracy}')
-                write(f'Evasion:  {PlayerEvasion}')
+                write(f'PlayerSoulPoint: {PlayerSoulPoint}')
+                write(f'Intelligence: {PlayerIntelligence}')
+                write(f'PlayerSpeed: {PlayerSpeed}')
                 print()
                 write('Press enter to continue.')
                 userinput()

@@ -12,9 +12,10 @@ WakeUp:
 GoBackAsleep:
   intro: 'You go back to bed and sleep longer'
   introimage: InBedLayingDown
-  stats:
-    - 
   text: 'You woke up and noticed you have missed the bus. What do you do?'
+  stats:
+    - PlayerIntelligence: -1
+    - PlayerSoulPoint: 5
   textimage: InBedScared
   choices:
     - text: 'Ask mom for a ride'
@@ -27,17 +28,22 @@ GoBackAsleep:
 AskMomForARide:
   intro: 'You get up and find mom. She sees you and yells at you that you missed the bus. You ask her for a ride.'
   text: 'She says she has to go to work, and told you to figure it out yourself. What do you do?'
+  stats:
+    - PlayerHealth: 19
   choices:
     - text: 'Walk to school'
-      result: AskMomWalkToSchool
+      result: WalkToSchool
     - text: 'Knock on other peoples doors untill one can give you a ride'
       result: KnockOnDoors
     - text: 'Skip school'
       result: SkipSchool
 
-AskMomWalkToSchool:
+WalkToSchool:
   intro: 'You grab your stuff and go out the door. You notice a man nearby.'
   text: 'The man wanted to talk to you. What do you do?'
+  stats:
+    - PlayerHealth: 1
+    - PlayerSpeed: 1
   choices:
     - text: 'Talk to the man'
       result: TalkToMan
@@ -49,6 +55,8 @@ AskMomWalkToSchool:
 TalkToMan:
   intro: 'The man tells you that they have seen you before, and talks about life as he waters his plants.'
   text: 'The man asks you if you could fill up his watering can. What do you do?'
+  stats:
+    - PlayerIntelligence: 1
   choices:
     - text: 'Tell them you would love to but you really need to go'
       result: LeaveMan
@@ -71,6 +79,9 @@ LeaveMan:
 RunToSchool:
   intro: 'You start running to school as fast as you can.'
   text: 'As you are running, your backpack is very heavy and is making it hard to run. What do you do?'
+  stats:
+    - PlayerSpeed: 1
+    - PlayerHealth: -2
   choices:
     - text: 'Take off the backpack and forget about it so you can run faster'
       result: DropBackpack
@@ -82,6 +93,8 @@ RunToSchool:
 DropBackpack:
   intro: 'You take off the backpack, throw it into a bush and keep running'
   text: 'As you are running you need a drink. What do you do?'
+  stats:
+    - PlayerHealth: 1
   choices:
     - text: 'Keep running to school'
       result: KeepRunningThirsty
@@ -93,6 +106,9 @@ DropBackpack:
 KeepRunningThirsty:
   intro: 'You fought through the thirst and kept running'
   text: 'You make it to school, but you are unsure of what to do next. What do you do?'
+  stats:
+    - PlayerHealth: -2
+    - PlayerSpeed: 1
   choices:
     - text: 'Sneak in school so you are not marked late'
       result: SneakIntoSchool
@@ -102,6 +118,8 @@ KeepRunningThirsty:
 SneakIntoSchool:
   intro: 'You find your way in, but you run into a teacher.'
   text: 'The teacher asks are you late for school. What do you do?'
+  stats: 
+    - PlayerIntelligence: -1
   choices:
     - text: 'Tell them that you were late'
       result: AdmitLate
@@ -124,6 +142,7 @@ AdmitLate:
 NapOnDesk:
   intro: 'The teacher notices and sends you to the office'
   text: 'The principal asks you what happened. What do you say?'
+  
   choices:
     - text: 'You pull out a handbook, and act like you know everything in it, and say that it says that if a student has sleep deprivation, then you can nap'
       result: HandbookRule

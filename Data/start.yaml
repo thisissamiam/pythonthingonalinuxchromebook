@@ -29,7 +29,7 @@ AskMomForARide:
   intro: 'You get up and find mom. She sees you and yells at you that you missed the bus. You ask her for a ride.'
   text: 'She says she has to go to work, and told you to figure it out yourself. What do you do?'
   stats:
-    - PlayerHealth: 19
+    - PlayerHealth: -1
   choices:
     - text: 'Walk to school'
       result: WalkToSchool
@@ -131,6 +131,8 @@ SneakIntoSchool:
 AdmitLate:
   intro: 'The teacher is accepting and marks you as on time, and you walk to your first class.'
   text: 'You feel tired and want to take a nap, what do you do?'
+  stats:
+    - PlayerIntelligence: 1
   choices:
     - text: 'Take the nap on your desk'
       result: NapOnDesk
@@ -142,7 +144,10 @@ AdmitLate:
 NapOnDesk:
   intro: 'The teacher notices and sends you to the office'
   text: 'The principal asks you what happened. What do you say?'
-  
+  stats:
+    - PlayerIntelligence: -1
+    - PlayerSoulPoint: 1
+    - PlayerHealth: 1
   choices:
     - text: 'You pull out a handbook, and act like you know everything in it, and say that it says that if a student has sleep deprivation, then you can nap'
       result: HandbookRule
@@ -154,28 +159,34 @@ NapOnDesk:
 HandbookRule:
   intro: 'The principal looks at you, and looks at the handbook.'
   text: 'The principal agrees, and says they are sorry. What do you say?'
+  stats:
+    - PlayerIntelligence: 1
   choices:
     - text: 'Get Jiggy with it - trust i didnt make this - game dev?'
-      result: BreakdanceEnding
+      result: GetJiggy
     - text: 'I KNEW IT HAAHAHAHHAHAHHA YOUR HANDBOOK SUCKS'
       result: EvilLaughEnding
     - text: 'Tell them you accept their apology'
       result: AcceptApology
 
-BreakdanceEnding:
+GetJiggy:
+  stats:
+    - PlayerIntelligence: -1
   intro: 'The principal JOINS YOU and starts breakdancing.'
   text: 'is ducktape safe for keeping the poopy in? What do you say?'
   choices:
-    - text: 'Get Jiggy with it - trust i didnt make this - game dev?'
-      result: JokeEnding1
-    - text: 'I KNEW IT HAAHAHAHHAHAHHA YOUR HANDBOOK SUCKS'
-      result: JokeEnding2
-    - text: 'Tell them you accept their apology'
-      result: JokeEnding3
+    - text: 'yes'
+      result: DucktapeSafe
+    - text: 'no'
+      result: DucktapeNotSafe
+    - text: 'indead'
+      result: DucktapeSafe
 
 PunchMan:
   intro: 'You look at the man. And punch them.'
   text: 'The man takes their phone out runs away and calls the police. What do you do?'
+  stats: 
+    - PlayerIntelligence: -1
   choices:
     - text: 'Follow the man'
       result: FollowMan
@@ -186,6 +197,8 @@ PunchMan:
 
 FollowMan:
   intro: 'You follow the man.'
+  stats:
+    - PlayerIntelligence: -1
   text: 'He goes inside his house. What do you do?'
   choices:
     - text: 'Go inside his house'
@@ -194,6 +207,8 @@ FollowMan:
       result: GoToSchoolAfterPunch
 
 EnterHouse:
+  stats:
+    - PlayerIntelligence: -1
   intro: 'You follow him inside his house.'
   text: 'The man was a murderer. What do you do?'
   choices:
@@ -210,11 +225,74 @@ FightMurderer:
       result: End
 
 GiveUpToMurderer:
+  stats:
+    - PlayerIntelligence: 1
   intro: 'You give up.'
-  text: 'They kill you even after you surrender'
+  text: "They see that you surrendered and are about to kill you. But the police arrive and you are saved"
   choices:
-    - text: 'You died. This choice does not work'
-      result: End
+    - text: 'Go to school'
+      result: GoToSchoolAfterMurder
+    - text: 'Go home'
+      result: GoHome
+Gohome:
+  intro: 'You go home'
+  text: 'Do you play video games?'
+  choices:
+    - text: 'Yes'
+      result: VideoGames
+    - text: 'No'
+      result: NoVideoGames
+GoToSchoolAfterMurder:
+  intro: 'You go to school after the murder attempt. When you get their you explain what happend and they understand'
+  text: 'You go to your third period. Do you do your work?'
+  choices:
+    - text: 'Yes'
+      result: DoWorkThirdPeriod
+    - text: 'No'
+      result: NoWorkThirdPeriod
+DoWorkThirdPeriod:
+  intro: 'You do your work and the first problem you need to do is 3+3'
+  text: 'What is the answer?'
+  choices:
+    - text: '1'
+      result: WrongAnswerThirdPeriod
+    - text: '2'
+      result: WrongAnswerThirdPeriod
+    - text: '3'
+      result: WrongAnswerThirdPeriod
+    - text: '4'
+      result: WrongAnswerThirdPeriod
+    - text: '5'
+      result: WrongAnswerThirdPeriod
+    - text: '6'
+      result: CorrectAnswerThirdPeriod
+    - text: '7'
+      result: WrongAnswerThirdPeriod
+    - text: '8'
+      result: WrongAnswerThirdPeriod
+    - text: '9'
+      result: WrongAnswerThirdPeriod
+    - text: '10'
+      result: WrongAnswerThirdPeriod
+WrongAnswerThirdPeriod:
+  intro: 'You got the problem wrong. You go through the other periods and don''t do well'
+  stats:
+    - PlayerIntelligence: -5
+  text: 'Do you leave school early without permission?'
+  choices:
+    - text: 'Yes'
+      result: LeaveSchoolEarlyWithoutPermission
+    - text: 'No'
+      result: FinishFirstSchoolDay
+LeaveSchoolEarlyWithoutPermission:
+  intro: 'You try to sneak out of school early'
+  text: 'A teacher caughts you but doesn''t punish you. What do you do?'
+  choices:
+    - text: 'Continue school'
+      result: FinishFirstSchoolDay
+    - text: 'Practice and try again'
+      result: PracticeEscapingFirstDayAndTryAgain
+
 
 GetUpOutOfBed:
   intro: 'You get out of bed and get ready for the bus.'

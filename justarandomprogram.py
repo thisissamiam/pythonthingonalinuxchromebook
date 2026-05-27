@@ -155,7 +155,7 @@ while True:
         write(f"{str(i+1)}) {choices[i]['text']}")
     write(str((len(choices))+1) + ') Stats')
     answer = userinput()
-    if not answer.isnumber():
+    if not answer.isnumeric():
         if answer.lower() == 's':
             write('Saving game...')
             write(level)

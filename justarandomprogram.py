@@ -29,8 +29,9 @@ def write(input):
             print()
             total = ''
             newline = False
-        total += i
-        print(total)
+        if not specialchar and not newline:
+            total += i
+            print(total)
         num = (random.randint(0,1))*.10
         time.sleep(num)
         print('\033[A\033[A')

@@ -35,10 +35,7 @@ def write(input):
         num = (random.randint(0,1))*.10
         time.sleep(num)
         print('\033[A\033[A')
-
-
-        
-    print('')
+    print()
 def userinput(string=''):
     return(input('>>> ' + string))
 layer = '1'
@@ -116,58 +113,45 @@ if not skip:
         exit()
 with open('./Data/start.yaml', 'r') as file:
         data = yaml.safe_load(file)
+
+
+# GAME LOOP
 while True:
-    try:
-        data[level]
-    except:
+    if level in data:
+        node = data[level]
+    else:
         write(f"Error: {level} does not exist in yaml")
         if loadedfromsave:
             write('Bad save file.')
         else:
             write('This probally means the game ended, but this should not happen in the release.')
         exit()
-    try:
-        write(data[level]['intro'])
+    if 'intro' in node:
+        write(node['intro'])
         intro = True
-    except:
+    else:
         intro = False
-    try:
-        with open('./Assets/'+ data[level]['introimage']+ '.txt', 'r') as file:
+    path = './Assets/'+ data[level]['introimage']+ '.txt'
+    if os.path.isfile:
+        with open(path, 'r') as file:
             print(file.read())
         time.sleep(2)
-    except:
+    else:
         if intro:
             time.sleep(2)
     os.system('clear')
     write(data[level]['text'])
-    try:
-        with open('./Assets/' + data[level]['textimage'] + '.txt', 'r') as file:
+    path = './Assets/' + data[level]['textimage'] + '.txt'
+    if os.path.isfile:
+        with open(path, 'r') as file:
             print(file.read())
             print()
-    except:
-        pass
     choices = data[level]['choices']
     for i in range(len(choices)):
         write(f"{str(i+1)}) {choices[i]['text']}")
     write(str((len(choices))+1) + ') Stats')
     answer = userinput()
-    try:
-            answer = int(answer)
-            if answer == len(choices) + 1:
-                os.system('clear')
-                write('Your stats are...')
-                write(f'Health: {PlayerHealth}')
-                write(f'Attack: {PlayerAttack}')
-                write(f'PlayerSoulPoint: {PlayerSoulPoint}')
-                write(f'Intelligence: {PlayerIntelligence}')
-                write(f'PlayerSpeed: {PlayerSpeed}')
-                print()
-                write('Press enter to continue.')
-                userinput()
-            else:
-                answer -= 1
-                level = (choices[answer]['result'])
-    except:
+    if not type(answer, int):
         if answer.lower() == 's':
             write('Saving game...')
             write(level)
@@ -175,5 +159,20 @@ while True:
             exit()
         else:
             write("That's not a number!")
-            exit(1)
+            continue
+    answer = int(answer)
+    if answer == len(choices) + 1:
+        os.system('clear')
+        write('Your stats are...')
+        write(f'Health: {PlayerHealth}')
+        write(f'Attack: {PlayerAttack}')
+        write(f'PlayerSoulPoint: {PlayerSoulPoint}')
+        write(f'Intelligence: {PlayerIntelligence}')
+        write(f'PlayerSpeed: {PlayerSpeed}')
+        print()
+        write('Press enter to continue.')
+        userinput()
+    else:
+        answer -= 1
+        level = (choices[answer]['result'])
     os.system('clear')

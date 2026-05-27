@@ -4,11 +4,14 @@ import os
 import yaml
 
 # Player Defines
-PlayerHealth = 20
-PlayerAttack = 1
-PlayerSoulPoint = 20
-PlayerSpeed = 1
-PlayerIntelligence = 10
+stats:{
+PlayerHealth: 20,
+PlayerAttack: 1,
+PlayerSoulPoint: 20,
+PlayerSpeed: 1,
+PlayerIntelligence: 10
+}
+
 
 def write(input):
     specialchar = False
@@ -146,7 +149,9 @@ while True:
     os.system('clear')
     if "stats" in node:
         for stat in node['stats']:
-            write(stat)
+            amount = node['stats'][stat]
+            stats[stat] = amount
+            write('Your stat', stat, 'changed by ', amount)
     write(node['text']) # write next question
     path = './Assets/' + data[level]['textimage'] + '.txt'
     if os.path.isfile(path):
@@ -171,11 +176,11 @@ while True:
     if answer == len(choices) + 1:
         os.system('clear')
         write('Your stats are...')
-        write(f'Health: {PlayerHealth}')
-        write(f'Attack: {PlayerAttack}')
-        write(f'PlayerSoulPoint: {PlayerSoulPoint}')
-        write(f'Intelligence: {PlayerIntelligence}')
-        write(f'PlayerSpeed: {PlayerSpeed}')
+        write(f'Health: {stats['PlayerHealth']}')
+        write(f'Attack: {stats['PlayerAttack']}')
+        write(f'PlayerSoulPoint: {stats[PlayerSoulPoint]}')
+        write(f'Intelligence: {stats[PlayerIntelligence]}')
+        write(f'PlayerSpeed: {stats[PlayerSpeed]}')
         print()
         write('Press enter to continue.')
         userinput()

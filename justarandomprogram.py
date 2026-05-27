@@ -5,11 +5,11 @@ import yaml
 
 # Player Defines
 stats:{
-PlayerHealth: 20,
-PlayerAttack: 1,
-PlayerSoulPoint: 20,
-PlayerSpeed: 1,
-PlayerIntelligence: 10
+"PlayerHealth": 20,
+"PlayerAttack": 1,
+"PlayerSoulPoint": 20,
+"PlayerSpeed": 1,
+"PlayerIntelligence": 10
 }
 
 

@@ -16,10 +16,11 @@ def write(input):
     print()
     total = ''
     for i in input:
-        
         if specialchar:
             if i == 'n':
                 newline = True
+                print()
+                total = ''
         if i == '\\':
             specialchar = True
         else:

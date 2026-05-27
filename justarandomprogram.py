@@ -146,7 +146,7 @@ while True:
     os.system('clear')
     if "stats" in node:
         for stat in node['stats']:
-            write(stat[0] '=' stat[1])
+            write(stat[0], '=' ,stat[1])
     write(node['text']) # write next question
     path = './Assets/' + data[level]['textimage'] + '.txt'
     if os.path.isfile(path):

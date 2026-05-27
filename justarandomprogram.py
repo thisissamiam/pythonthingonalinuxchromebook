@@ -19,13 +19,15 @@ def write(input):
         if specialchar:
             if i == 'n':
                 newline = True
-                print()
-                total = ''
+            else:
+                newline = False
         if i == '\\':
             specialchar = True
         else:
             specialchar = False
-        
+        if newline:
+            print()
+            total = ''
         total += i
         print(total)
         num = (random.randint(0,1))*.10

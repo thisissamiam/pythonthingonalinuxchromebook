@@ -144,7 +144,7 @@ while True:
             time.sleep(2)
     
     os.system('clear')
-    if stats in node:
+    if "stats" in node:
         for stat in stats:
             print(stat)
     write(node['text']) # write next question

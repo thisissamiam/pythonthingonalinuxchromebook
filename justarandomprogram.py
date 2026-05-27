@@ -133,7 +133,7 @@ while True:
         intro = False
     if 'introimage' in node:
         path = './Assets/'+ data[level]['introimage']+ '.txt'
-        if os.path.isfile:
+        if os.path.isfile(path):
             with open(path, 'r') as file:
                 print(file.read())
             time.sleep(2)
@@ -146,10 +146,10 @@ while True:
     os.system('clear')
     if "stats" in node:
         for stat in node['stats']:
-            print(stat)
+            write(stat[0] '=' stat[1])
     write(node['text']) # write next question
     path = './Assets/' + data[level]['textimage'] + '.txt'
-    if os.path.isfile:
+    if os.path.isfile(path):
         with open(path, 'r') as file:
             print(file.read())
             print()

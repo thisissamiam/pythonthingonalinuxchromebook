@@ -145,7 +145,7 @@ while True:
     
     os.system('clear')
     if "stats" in node:
-        for stat in stats:
+        for stat in node['stats']:
             print(stat)
     write(node['text']) # write next question
     path = './Assets/' + data[level]['textimage'] + '.txt'

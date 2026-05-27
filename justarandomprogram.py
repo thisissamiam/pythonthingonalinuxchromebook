@@ -149,7 +149,7 @@ while True:
     os.system('clear')
     if "stats" in node:
         for stat in node['stats']:
-            amount = node['stats'][stat]
+            amount = node['stats'].item(stat)
             stats[stat] = amount
             write('Your stat', stat, 'changed by ', amount)
     write(node['text']) # write next question

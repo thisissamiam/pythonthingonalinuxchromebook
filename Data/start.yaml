@@ -149,7 +149,7 @@ NapOnDesk:
     - PlayerSoulPoint: 1
     - PlayerHealth: 1
   choices:
-    - text: 'You pull out a handbook, and act like you know everything in it, and say that it says that if a student has sleep deprivation, \n then you can nap'
+    - text: 'You pull out a handbook, and act like you know everything in it, and say \nthat it says that if a student has sleep deprivation, then you can nap'
       result: HandbookRule
     - text: 'Lie'
       result: LieToPrincipal

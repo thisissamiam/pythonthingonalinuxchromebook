@@ -28,12 +28,12 @@ def write(input):
         if newline:
             print()
             total = ''
+            newline = False
         total += i
         print(total)
         num = (random.randint(0,1))*.10
         time.sleep(num)
-        if not newline:
-            print('\033[A\033[A')
+        print('\033[A\033[A')
 
 
         

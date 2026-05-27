@@ -133,15 +133,16 @@ while True:
         intro = False
     if 'introimage' in node:
         path = './Assets/'+ data[level]['introimage']+ '.txt'
+        if os.path.isfile:
+            with open(path, 'r') as file:
+                print(file.read())
+            time.sleep(2)
+        else:
+            write(f"{path} does not exist!!!")
     else:
         if intro:
             time.sleep(2)
-    if os.path.isfile:
-        with open(path, 'r') as file:
-            print(file.read())
-        time.sleep(2)
-    else:
-        write(f"{path} does not exist!!!")
+    
     os.system('clear')
     write(data[level]['text'])
     path = './Assets/' + data[level]['textimage'] + '.txt'

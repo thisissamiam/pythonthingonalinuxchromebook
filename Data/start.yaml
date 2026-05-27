@@ -149,7 +149,7 @@ NapOnDesk:
     - PlayerSoulPoint: 1
     - PlayerHealth: 1
   choices:
-    - text: 'You pull out a handbook, and act like you know everything in it, and say that it says that if a student has sleep deprivation, then you can nap'
+    - text: 'You pull out a handbook, and act like you know everything in it, and say that it says that if a student has sleep deprivation, \n then you can nap'
       result: HandbookRule
     - text: 'Lie'
       result: LieToPrincipal
@@ -285,6 +285,8 @@ WrongAnswerThirdPeriod:
     - text: 'No'
       result: FinishFirstSchoolDay
 LeaveSchoolEarlyWithoutPermission:
+  stats:
+    - PlayerIntelligence: -1
   intro: 'You try to sneak out of school early'
   text: 'A teacher caughts you but doesn''t punish you. What do you do?'
   choices:
@@ -295,6 +297,8 @@ LeaveSchoolEarlyWithoutPermission:
 
 
 GetUpOutOfBed:
+  stats:
+    - PlayerIntelligence: 1
   intro: 'You get out of bed and get ready for the bus.'
   introimage: OutOfBed
   text: 'Do you go to school?'
@@ -306,6 +310,8 @@ GetUpOutOfBed:
       result: StayHome
 
 GoToSchool:
+  stats:
+    - PlayerIntelligence: 1
   intro: 'You decide to go to school'
   text: 'Where do you want to sit on the bus?'
   choices:
@@ -315,6 +321,8 @@ GoToSchool:
       result: SitAlone
 
 StayHome:
+  stats:
+    - PlayerIntelligence: -1
   intro: 'You decide that you do not want to go to school'
   text: 'Play video games?'
   choices:
@@ -324,6 +332,8 @@ StayHome:
       result: PlayGames
 
 ScrollOnPhone:
+  stats:
+    - PlayerIntelligence: -2
   intro: 'You scroll on your phone'
   introimage: ScrollOnPhone
   text: 'Do you get ready for school?'

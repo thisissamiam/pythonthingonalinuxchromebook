@@ -11,14 +11,29 @@ PlayerSpeed = 1
 PlayerIntelligence = 10
 
 def write(input):
+    specialchar = False
+    newline = False
     print()
     total = ''
     for i in input:
+        
+        if specialchar:
+            if i == 'n':
+                newline = True
+        if i == '\\':
+            specialchar = True
+        else:
+            specialchar = False
+        
         total += i
         print(total)
         num = (random.randint(0,1))*.10
         time.sleep(num)
-        print('\033[A\033[A')
+        if not newline:
+            print('\033[A\033[A')
+
+
+        
     print('')
 def userinput(string=''):
     return(input('>>> ' + string))

@@ -47,6 +47,7 @@ for i,lan in enumerate(os.listdir('./locale/')):
     write(f"{i+1}) {lan[:-5]}")
 answer = userinput()
 print(os.listdir('./locale/'))
+exit()
 if os.path.isfile(f'./locale/{lan}'):
     with open(f'./locale/{lan}', 'r') as file:
         lan = yaml.safe_load(file)

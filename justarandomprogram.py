@@ -4,7 +4,7 @@ import os
 import yaml
 
 # Player Defines
-stats:{
+stats = {
 "PlayerHealth": 20,
 "PlayerAttack": 1,
 "PlayerSoulPoint": 20,

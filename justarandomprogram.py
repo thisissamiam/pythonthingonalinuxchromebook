@@ -149,10 +149,8 @@ while True:
     os.system('clear')
     if "stats" in node:
         for stat in node['stats']:
-            print(stat)
             for key, value in stat.items():
-                print(key)
-                print(value)
+                stat[key] + value
     write(node['text']) # write next question
     path = './Assets/' + data[level]['textimage'] + '.txt'
     if os.path.isfile(path):

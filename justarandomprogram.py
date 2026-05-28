@@ -56,7 +56,8 @@ else:
 
 layer = '1'
 os.system('clear')
-write(lan['GameIntruduction'])
+for i in lan['GameIntruction']:
+    write(i)
 time.sleep(1)
 os.system('clear')
 write('A image will appear on your screen. Please make sure it fits. Please say, "good" to confirm.')

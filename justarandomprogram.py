@@ -41,6 +41,12 @@ def write(input):
     print()
 def userinput(string=''):
     return(input('>>> ' + string))
+
+write('What language?')
+for lan,i in enumerate(os.listdir('./locale/')):
+    write(f"{i+1}) {lan[:-5]}")
+userinput()
+
 layer = '1'
 os.system('clear')
 write('Hello!')
@@ -119,11 +125,7 @@ if not skip:
 
 with open('./Data/start.yaml', 'r') as file:
         data = yaml.safe_load(file)
-write('What language?')
-for i in range(len(os.listdir('./locale/'))):
-    for lan in os.listdir('./locale/'):
-        write(f"{i+1}) {lan[:-5]}")
-userinput()
+
 
 # GAME LOOP
 while True:

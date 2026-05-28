@@ -43,7 +43,7 @@ def userinput(string=''):
     return(input('>>> ' + string))
 
 write('What language?')
-for lan,i in enumerate(os.listdir('./locale/')):
+for i,lan in enumerate(os.listdir('./locale/')):
     write(f"{i+1}) {lan[:-5]}")
 userinput()
 

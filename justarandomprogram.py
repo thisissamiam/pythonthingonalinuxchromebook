@@ -114,9 +114,14 @@ if not skip:
         os.system('clear')
     else:
         exit()
+
+# FILE LOADING
+
 with open('./Data/start.yaml', 'r') as file:
         data = yaml.safe_load(file)
-
+write('What language?')
+for i in range(len(os.listdir('./locale/')))
+write(f"{i}) {os.listdir('./locale/')}")
 
 # GAME LOOP
 while True:

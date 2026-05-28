@@ -1,0 +1,6 @@
+# Player Stats
+PlayerHealth: "Health"
+PlayerAttack: "Attack"
+PlayerSoulPoint: "Soul Points"
+PlayerSpeed: "Speed"
+PlayerIntelligence: "Intelligence"

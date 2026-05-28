@@ -51,7 +51,7 @@ while not answer.isnumeric():
     answer = userinput()
 answer = int(answer)-1
 try:
-    os.listdir('./locale/')[answer]
+    lan = os.listdir('./locale/')[answer]
 except:
     write('YOU DID SOMETHIGN WRONG or the code did no idea')
     exit()

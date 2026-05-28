@@ -53,7 +53,7 @@ if os.path.isfile('./locale/{files[i]}'+'.yaml'):
 
 layer = '1'
 os.system('clear')
-write(lan('GameIntruduction'))
+write(lan['GameIntruduction'])
 time.sleep(1)
 os.system('clear')
 write('A image will appear on your screen. Please make sure it fits. Please say, "good" to confirm.')

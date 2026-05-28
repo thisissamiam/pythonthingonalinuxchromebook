@@ -148,8 +148,8 @@ while True:
     
     os.system('clear')
     if "stats" in node:
-        for stat, amount in node['stats']:
-            write(amount)
+        for stat in node['stats']:
+            write(stat)
             exit()
             write('Your stat ' + stat + ' changed by ' + amount)
     write(node['text']) # write next question

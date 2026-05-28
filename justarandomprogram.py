@@ -122,6 +122,7 @@ with open('./Data/start.yaml', 'r') as file:
 write('What language?')
 for i in range(len(os.listdir('./locale/'))):
     write(f"{i}) {os.listdir('./locale/')}")
+userinput()
 
 # GAME LOOP
 while True:

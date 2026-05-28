@@ -1,0 +1,13 @@
+# Player Stats
+PlayerHealth: "Salud"
+PlayerAttack: "Ataque"
+PlayerSoulPoint: "Puntos de alma"
+PlayerSpeed: "Velocidad"
+PlayerIntelligence: "Inteligencia"
+
+# Introduction
+GameIntruduction:
+  - "¡Hola!"
+  - "Bienvenido"
+  - "a..."
+  - "¡Just a Random Program!!!"

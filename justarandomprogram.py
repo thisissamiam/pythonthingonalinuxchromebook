@@ -45,7 +45,11 @@ def userinput(string=''):
 write('What language?')
 for i,lan in enumerate(os.listdir('./locale/')):
     write(f"{i+1}) {lan[:-5]}")
-userinput()
+answer = userinput()
+path = './locale/' + os.listdir('./locale/')[i]
+if os.path.isfile(path):
+with open('./Data/start.yaml', 'r') as file:
+        data = yaml.safe_load(file)
 
 layer = '1'
 os.system('clear')

@@ -46,7 +46,7 @@ write('What language?')
 for i,lan in enumerate(os.listdir('./locale/')):
     write(f"{i+1}) {lan[:-5]}")
 userinput()
-if os.path.isfile(i+'.yaml'):
+if os.path.isfile('./locale/{files[i]}'+'.yaml'):
     with open(f'./locale/{files[i]}', 'r') as file:
         data = yaml.safe_load(file)
 

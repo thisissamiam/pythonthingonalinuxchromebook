@@ -150,7 +150,9 @@ while True:
     if "stats" in node:
         for stat in node['stats']:
             print(stat)
-            print(node['stats'][stat])
+            for key, value in stat:
+                print(key)
+                print(value)
     write(node['text']) # write next question
     path = './Assets/' + data[level]['textimage'] + '.txt'
     if os.path.isfile(path):

@@ -49,6 +49,7 @@ answer = userinput()
 while not answer.isnumeric():
     write('That is not a valid response..')
     answer = userinput()
+answer = int(answer)
 os.listdir('./locale/')[answer]
 exit()
 if os.path.isfile(f'./locale/{lan}'):

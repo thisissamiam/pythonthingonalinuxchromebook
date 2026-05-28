@@ -150,6 +150,7 @@ while True:
     if "stats" in node:
         for stat in node['stats']:
             write(stat)
+            write(node['stats'])
             exit()
             write('Your stat ' + stat + ' changed by ' + amount)
     write(node['text']) # write next question

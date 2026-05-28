@@ -46,7 +46,10 @@ write('What language?')
 for i,lan in enumerate(os.listdir('./locale/')):
     write(f"{i+1}) {lan[:-5]}")
 answer = userinput()
-print(os.listdir('./locale/'))
+while not answer.isnumeric():
+    write('That is not a valid response..')
+    answer = userinput()
+os.listdir('./locale/')[answer]
 exit()
 if os.path.isfile(f'./locale/{lan}'):
     with open(f'./locale/{lan}', 'r') as file:

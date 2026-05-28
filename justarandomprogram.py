@@ -176,11 +176,12 @@ while True:
                 stats[key] += value
                 write(f"{key} has changed by {value}")
     write(node['text']) # write next question
-    path = './Assets/' + data[level]['textimage'] + '.txt'
-    if os.path.isfile(path):
-        with open(path, 'r') as file:
-            print(file.read())
-            print()
+    if 'textimage' in node:
+        path = './Assets/' + node['textimage'] + '.txt'
+        if os.path.isfile(path):
+            with open(path, 'r') as file:
+                print(file.read())
+                print()
     choices = data[level]['choices']
     for i in range(len(choices)):
         write(f"{str(i+1)}) {choices[i]['text']}")

@@ -51,7 +51,6 @@ while not answer.isnumeric():
     answer = userinput()
 answer = int(answer)
 os.listdir('./locale/')[answer]
-exit()
 if os.path.isfile(f'./locale/{lan}'):
     with open(f'./locale/{lan}', 'r') as file:
         lan = yaml.safe_load(file)

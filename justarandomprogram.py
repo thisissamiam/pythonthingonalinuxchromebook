@@ -150,7 +150,7 @@ while True:
     if "stats" in node:
         for stat in node['stats']:
             amount = stat
-            write('Your stat', stat, 'changed by ', amount)
+            write('Your stat ' + stat + ' changed by ' + amount)
     write(node['text']) # write next question
     path = './Assets/' + data[level]['textimage'] + '.txt'
     if os.path.isfile(path):

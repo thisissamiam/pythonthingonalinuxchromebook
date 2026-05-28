@@ -9,7 +9,14 @@ stats = {
 "PlayerAttack": 1,
 "PlayerSoulPoint": 20,
 "PlayerSpeed": 1,
-"PlayerIntelligence": 10
+"PlayerIntelligence": 10,
+"PlayerMoney": 0,
+"PlayerCanDrive": False,
+"PlayerHasCar": False,
+"PlayerOwnsHouse": False,
+"PlayerLiveInParentsHouse": True,
+"PlayerProgressInSchool": 9.4,
+"PlayersGrade": 80
 }
 
 
@@ -205,6 +212,7 @@ while True:
         write(f'PlayerSoulPoint: {stats['PlayerSoulPoint']}')
         write(f'Intelligence: {stats['PlayerIntelligence']}')
         write(f'PlayerSpeed: {stats['PlayerSpeed']}')
+        write(f'Money: {stats['PlayerMoney']}')
         print()
         write('Press enter to continue.')
         userinput()

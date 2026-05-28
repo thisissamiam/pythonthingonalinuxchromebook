@@ -278,6 +278,7 @@ WrongAnswerThirdPeriod:
   intro: 'You got the problem wrong. You go through the other periods and don''t do well'
   stats:
     - PlayerIntelligence: -5
+    - PlayersGrade: -10
   text: 'Do you leave school early without permission?'
   choices:
     - text: 'Yes'
@@ -398,3 +399,74 @@ AllDayScrolling:
       result: GoToHospitalFromBeingOnPhone
     - text: 'No'
       result: AllDayScrollingStop
+GoToHospitalFromBeingOnPhone:
+  intro: 'You attempt to stay on your phone. You passed out and are going to the hospital.'
+  introimage: PassedOutFromScrollingOnPhone
+  text: 'Do you scroll in the hospital?'
+  textimage: InHospitalBed
+  choices:
+    - text: 'Yes'
+      result: ExtremelySickFromScrollingOnPhone
+    - text: 'No'
+      result: GetBetterInHospital
+ExtremelySickFromScrollingOnPhone:
+  stats:
+    - PlayerIntelligence: -3
+    - PlayerHealth: -2
+  intro: 'You get extremely sick.'
+  introimage: ExtremelySickInHospital
+  text: 'You are asked if you want to be treated in the hospital'
+  textimage: HospitalStaffAroundBed
+  choices:
+    - text: 'Yes'
+      result: AllowTreatmentFromHospitalStaff
+    - text: 'No'
+      result: DisAllowTreatmentFromHospitalStaff
+AllowTreatmentFromHospitalStaff:
+  intro: 'You allow treatment from hospital staff and they treat you.'
+  introimage: HospitalStaffAroundBed
+  text: 'Do you leave the hospital'
+  textimage: InHospitalBed
+  choices:
+    - text: 'Yes'
+      result: GetBillFromHospital
+    - text: 'No'
+      result: StayInHospital
+GetBillFromHospital:
+  stats:
+    - PlayerMoney: -30000
+  intro: 'You leave the hospital and get the bill.'
+  introimage: LeavingHospital
+  text: 'Do you go home'
+  textimage: LeavingHospital
+  choices:
+    - text: 'Yes'
+      result: GoHome
+    - text: 'No'
+      result: WhereToGo
+WhereToGo:
+  intro: 'You think where to go.'
+  introimage: Thinking
+  text: 'Where do you go?'
+  textimage: ThinkingLightBulb
+  choices:
+    - text: 'FastFood'
+      result: GetFastFood
+    - text: 'Go to the arcade'
+      result: GoToArcade
+    - text: 'Walk around'
+      result: WalkAround
+    - text: 'Find a job'
+      result: FindAJob
+GetFastFood:
+  intro: 'You decide to get fast food'
+  introimage: FastFood
+  text: 'Where should you go?'
+  textimage: HowToGetThere
+  choices:
+    - text: 'Drive'
+      result: Result1
+    - text: 'choice 2'
+      result: Result2
+    - text: 'choice 3'
+      result: Result3

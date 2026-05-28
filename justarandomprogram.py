@@ -149,8 +149,7 @@ while True:
     os.system('clear')
     if "stats" in node:
         for stat in node['stats']:
-            amount = item[stat]
-            stats[stat] = amount
+            amount = stat
             write('Your stat', stat, 'changed by ', amount)
     write(node['text']) # write next question
     path = './Assets/' + data[level]['textimage'] + '.txt'

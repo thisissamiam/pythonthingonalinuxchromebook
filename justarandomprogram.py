@@ -49,10 +49,7 @@ userinput()
 
 layer = '1'
 os.system('clear')
-write('Hello!')
-write('Welcome')
-write('to...')
-write('justarandomprogram!!!')
+write(lan('GameIntruduction'))
 time.sleep(1)
 os.system('clear')
 write('A image will appear on your screen. Please make sure it fits. Please say, "good" to confirm.')

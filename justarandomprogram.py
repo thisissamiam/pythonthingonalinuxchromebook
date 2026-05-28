@@ -150,7 +150,7 @@ while True:
     if "stats" in node:
         for stat in node['stats']:
             for key, value in stat.items():
-                stats[key] + value
+                stats[key] += value
     write(node['text']) # write next question
     path = './Assets/' + data[level]['textimage'] + '.txt'
     if os.path.isfile(path):
@@ -177,9 +177,9 @@ while True:
         write('Your stats are...')
         write(f'Health: {stats['PlayerHealth']}')
         write(f'Attack: {stats['PlayerAttack']}')
-        write(f'PlayerSoulPoint: {stats[PlayerSoulPoint]}')
-        write(f'Intelligence: {stats[PlayerIntelligence]}')
-        write(f'PlayerSpeed: {stats[PlayerSpeed]}')
+        write(f'PlayerSoulPoint: {stats['PlayerSoulPoint']}')
+        write(f'Intelligence: {stats['PlayerIntelligence']}')
+        write(f'PlayerSpeed: {stats['PlayerSpeed']}')
         print()
         write('Press enter to continue.')
         userinput()

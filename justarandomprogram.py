@@ -48,7 +48,7 @@ for i,lan in enumerate(os.listdir('./locale/')):
 userinput()
 if os.path.isfile('./locale/{files[i]}'+'.yaml'):
     with open(f'./locale/{files[i]}', 'r') as file:
-        data = yaml.safe_load(file)
+        lan = yaml.safe_load(file)
 
 
 layer = '1'

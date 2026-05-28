@@ -51,6 +51,7 @@ if os.path.isfile(f'./locale/{lan[i]}'+'.yaml'):
         lan = yaml.safe_load(file)
 else:
     print(f'./locale/{lan[i]}'+'.yaml')
+    exit()
 
 
 layer = '1'

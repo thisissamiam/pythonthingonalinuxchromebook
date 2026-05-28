@@ -150,7 +150,7 @@ while True:
     if "stats" in node:
         for stat in node['stats']:
             print(stat)
-            for key, value in stat:
+            for key, value in stat.items():
                 print(key)
                 print(value)
     write(node['text']) # write next question

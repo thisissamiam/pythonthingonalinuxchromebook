@@ -151,6 +151,7 @@ while True:
         for stat in node['stats']:
             for key, value in stat.items():
                 stats[key] += value
+                write(f"{key} has changed by {value}")
     write(node['text']) # write next question
     path = './Assets/' + data[level]['textimage'] + '.txt'
     if os.path.isfile(path):

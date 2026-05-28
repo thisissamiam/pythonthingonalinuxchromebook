@@ -56,7 +56,7 @@ else:
 
 layer = '1'
 os.system('clear')
-for i in lan['GameIntruction']:
+for i in lan['GameIntruduction']:
     write(i)
 time.sleep(1)
 os.system('clear')

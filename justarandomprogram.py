@@ -121,8 +121,8 @@ with open('./Data/start.yaml', 'r') as file:
         data = yaml.safe_load(file)
 write('What language?')
 for i in range(len(os.listdir('./locale/'))):
-    for lan in os.listdir('./locale/').slice('.yaml'):
-        write(f"{i+1}) {lan}")
+    for lan in os.listdir('./locale/'):
+        write(f"{i+1}) {lan[:-5]}")
 userinput()
 
 # GAME LOOP

@@ -299,7 +299,7 @@ LeaveSchoolEarlyWithoutPermission:
 GetUpOutOfBed:
   stats:
     - PlayerIntelligence: 1
-  intro: 'You get out of bed and get ready for the bus.'
+  intro: 'You get out of bed.'
   introimage: OutOfBed
   text: 'Do you go to school?'
   textimage: NextToDoor
@@ -343,3 +343,58 @@ ScrollOnPhone:
       result: KeepScrolling
     - text: 'Yes'
       result: GetReadyAfterPhone
+KeepScrolling:
+  stats:
+    - PlayerIntelligence: -2
+    - PlayerHealth: -2
+  intro: "You keep scrolling and rot your brain"
+  introimage: ScrollOnPhone
+  text: 'Your brain cells are depleting. Do you keep scrolling?'
+  textimage: LosingBrainScrollOnPhone
+  choices:
+    - text: 'Yes'
+      result: KeepScrollingAgain
+    - text: 'No'
+      result: GetUpOutOfBed
+KeepScrollingAgain:
+  stats:
+    - PlayerIntelligence: -5
+    - PlayerHealth: -3
+  intro: 'You continue to scroll, you miss the bus.'
+  introimage: LosingBrainScrollOnPhone
+  text: 'Do you keep scrolling?'
+  textimage: LosingBrainScrollOnPhone
+  choices:
+    - text: 'Yes'
+      result: AllDayScrolling
+    - text: 'No'
+      result: MissedBusWantToGoToSchool
+MissedBusWantToGoToSchool:
+  stats:
+    - PlayerIntelligence: 1
+    - PlayerHealth: 1
+  intro: 'You stop what you are doing.'
+  introimage: InBedLayingDown
+  text: 'You noticed you have missed the bus. What do you do?'
+  textimage: InBedScared
+  choices:
+    - text: 'Ask mom for a ride'
+      result: AskMomForARide
+    - text: 'Walk to school'
+      result: WalkToSchool
+    - text: 'Skip school'
+      result: SkipSchool
+AllDayScrolling:
+  stats:
+    - PlayerSoulPoint: 1
+    - PlayerHealth: -4
+    - PlayerIntelligence: -5
+  intro: 'You scroll all day'
+  introimage: RedEyesScrolling
+  text: 'You are losing your mind. You are starving. You are thirsty. Do you keep scrolling?'
+  textimage: SlumpedRedEyesScrolling
+  choices:
+    - text: 'Yes'
+      result: GoToHospitalFromBeingOnPhone
+    - text: 'No'
+      result: AllDayScrollingStop

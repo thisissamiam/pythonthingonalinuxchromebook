@@ -30,10 +30,10 @@ def main(stdscr):
     curses.noecho()
     curses.cbreak()
     stdscr.keypad(True)
+    stdscr.nodelay(True)
 
     stdscr.addstr('HELLO')
     stdscr.refresh()
-    
 
 
 

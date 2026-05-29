@@ -35,7 +35,7 @@ def main(stdscr):
     stdscr.addstr(5, 10, "What language?")
     stdscr.refresh()
     for i,lan in enumerate(os.listdir('./locale/')):
-        stdscr.addstr(f"{i+1}) {lan[:-5]}")
+        stdscr.addstr(f"{i+1}) {lan[:-5]}\n")
     stdscr.refresh()
     while True:
         answer = stdscr.getch()

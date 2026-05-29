@@ -2,7 +2,7 @@ import time
 import random
 import os
 import yaml
-import curses
+from curses import *
 
 
 stdscr = curses.initscr()

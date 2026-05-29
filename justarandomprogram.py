@@ -33,7 +33,7 @@ def main(stdscr):
 
     stdscr.addstr('HELLO')
     stdscr.refresh()
-    stdscr.getch()
+    
 
 
 

@@ -234,7 +234,7 @@ GiveUpToMurderer:
       result: GoToSchoolAfterMurder
     - text: 'Go home'
       result: GoHome
-Gohome:
+GoHome:
   intro: 'You go home'
   text: 'Do you play video games?'
   choices:

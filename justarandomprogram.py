@@ -2,6 +2,13 @@ import time
 import random
 import os
 import yaml
+import curses
+
+
+stdscr = curses.initscr()
+curses.noecho()
+curses.cbreak()
+stdscr.keypad(True)
 
 # Player Defines
 stats = {
@@ -19,36 +26,13 @@ stats = {
 "PlayersGrade": 80
 }
 
+def main(stdscr):
+    stdscr.addstr('HELLO')
 
-def write(input):
-    specialchar = False
-    newline = False
-    print()
-    total = ''
-    for i in input:
-        if specialchar:
-            if i == 'n':
-                newline = True
-            else:
-                newline = False
-        if i == '\\':
-            specialchar = True
-        else:
-            specialchar = False
-        if newline:
-            print()
-            total = ''
-            newline = False
-        if not specialchar and not newline:
-            total += i
-            print(total)
-        num = (random.randint(0,1))*.10
-        time.sleep(num)
-        print('\033[A\033[A')
-    print()
-def userinput(string=''):
-    return(input('>>> ' + string))
 
+
+wrapper(main)
+exit()
 write('What language?')
 for i,lan in enumerate(os.listdir('./locale/')):
     write(f"{i+1}) {lan[:-5]}")

@@ -35,11 +35,10 @@ def main(stdscr):
     stdscr.refresh()
     for i,lan in enumerate(os.listdir('./locale/')):
         stdscr.addstr(f"{i+1}) {lan[:-5]}")
+    stdscr.refresh()
     answer = stdscr.getch()
-    while not answer.isnumeric():
-        write('That is not a valid response..')
-        answer = stdscr.getch()
     answer = int(answer)-1
+curses.wrapper(main)
 #     try:
 #         lan = os.listdir('./locale/')[answer]
 #     except:

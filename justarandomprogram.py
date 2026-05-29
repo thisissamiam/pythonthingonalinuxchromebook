@@ -25,7 +25,8 @@ stats = {
 "PlayerProgressInSchool": 9.4,
 "PlayersGrade": 80
 }
-
+def MakeErrorMessage(stdscr, message):
+    stdscr.addstr(0,-100, message)
 def main(stdscr):
     curses.noecho()
     curses.cbreak()
@@ -36,7 +37,11 @@ def main(stdscr):
     for i,lan in enumerate(os.listdir('./locale/')):
         stdscr.addstr(f"{i+1}) {lan[:-5]}")
     stdscr.refresh()
-    answer = stdscr.getch()
+    while True:
+        answer = stdscr.getch()
+        if answer > os.listdir('./locale/'):
+            MakeErrorMessage('That number is too high!')
+            
     answer = int(answer)-1
 curses.wrapper(main)
 #     try:

@@ -464,9 +464,71 @@ GetFastFood:
   text: 'Where should you go?'
   textimage: HowToGetThere
   choices:
-    - text: 'Drive'
-      result: Result1
-    - text: 'choice 2'
-      result: Result2
-    - text: 'choice 3'
-      result: Result3
+    - text: 'Burger King'
+      result: GoToBurgerKing
+    - text: 'Chick Fil A'
+      result: GoToChickFilA
+    - text: "Wendy's"
+      result: GoToWendys
+GoToArcade:
+  intro: 'You decide to go to the arcade'
+  introimage: InArcade
+  text: 'Do you spend money there?'
+  choices:
+    - text: 'Yes'
+      result: SpendMoneyAtArcade
+      require:
+        - stats:
+          - PlayerMoney:
+            - Amount: 20
+            - Else: "You don't have enough money to play at the arcade."
+    - text: 'No'
+      result: SpendNoMoneyAtArcade
+    - text: 'I changed my mind. I want to go somewhere elsewhere'
+      result: WhereToGo
+SpendMoneyAtArcade:
+  intro: 'You decide to spend money at the arcade'
+  introimage: PlayingArcadeGames
+  text: 'Do you go home?'
+  choices:
+    - text: 'Yes'
+      result: GoHome
+    - text: 'No'
+      result: WhereToGo
+SpendNoMoneyAtArcade:
+  intro: 'You decide to spend no money at the arcade.'
+  introimage: NoMoney
+  text: 'What do you do?'
+  textimage: Thinking
+  choices:
+    - text: 'Walk around'
+      result: WalkAroundArcade
+    - text: 'Secretly yell as loud as you can'
+      result: SecretlyYellInArcade
+    - text: 'Find a seat and sit down'
+      result: SitDownAtArcade
+WalkAroundArcade:
+  intro: 'You walk around the arcade'
+  introimage: WalkingAroundArcade
+  text: 'What do you do now?'
+GoToBurgerKing:
+  intro: 'You go to Burger King'
+  text: 'Do you spend money?'
+  choices:
+    - text: 'Yes, buy some food'
+      result: BuyFoodAtBurgerKing
+      require:
+        - stats:
+          - PlayerMoney:
+            - Amount: 30
+            - Else: "You don't have enough money to eat at Burger King."
+    - text: 'No, just sit down'
+      result: SitDownAtBurgerKing
+    - text: 'No, walk around'
+      result: WalkAroundAtBurgerKing
+    - text: 'I changed my mind. I want to go somewhere elsewhere'
+      result: WhereToGo
+BuyFoodAtBurgerKing:
+  intro: 'You go up to the menu.'
+  text: 'What do you buy?'
+  choices:

@@ -27,11 +27,17 @@ stats = {
 }
 
 def main(stdscr):
+    curses.noecho()
+    curses.cbreak()
+    stdscr.keypad(True)
+
     stdscr.addstr('HELLO')
+    stdscr.refresh()
+    stdscr.getch()
 
 
 
-wrapper(main)
+curses.wrapper(main)
 exit()
 write('What language?')
 for i,lan in enumerate(os.listdir('./locale/')):

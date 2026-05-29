@@ -3,6 +3,7 @@ import random
 import os
 import yaml
 import curses
+import tones
 
 
 stdscr = curses.initscr()
@@ -28,21 +29,32 @@ stats = {
 def MakeErrorMessage(stdscr, message):
     stdscr.addstr(0,-100, message)
 def main(stdscr):
-    curses.noecho()
-    curses.cbreak()
+    curses.curs_set(0) # Hide text curser
     stdscr.keypad(True)
-    stdscr.refresh()
-    stdscr.addstr(5, 10, "What language?")
-    stdscr.refresh()
-    for i,lan in enumerate(os.listdir('./locale/')):
-        stdscr.addstr(f"{i+1}) {lan[:-5]}\n")
-    stdscr.refresh()
+    selection = 1
+    curses.start_color()
+    curses.use_default_colors()
+    stdscr.addstr(0,0,"MENU")
+    choices = ["Play", "Settings"]
     while True:
-        answer = stdscr.getch()
-        if answer > os.listdir('./locale/'):
-            MakeErrorMessage('That number is too high!')
+        for i, choice in enumerate(choices):
+            if i+1 == selection:
+                stdscr.addstr(i+1, 1, f"{i+1}. {choice}", curses.A_REVERSE)
+            else:
+                stdscr.addstr(i+1, 1, f"{i+1}. {choice}", curses.A_NORMAL)
+        stdscr.refresh()
+        key = stdscr.getch()
+        if key == curses.KEY_UP and selection > 1:
+            selection -= 1
+        elif key == curses.KEY_DOWN and selection < 2:
+            selection += 1
+        
+        
+        
+
+
             
-    answer = int(answer)-1
+
 curses.wrapper(main)
 #     try:
 #         lan = os.listdir('./locale/')[answer]

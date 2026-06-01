@@ -48,7 +48,7 @@ def main(stdscr):
             selection -= 1
         elif key == curses.KEY_DOWN and selection < 2:
             selection += 1
-        elif key == 13:
+        elif key == 10:
             MakeErrorMessage('Error, it worked i just  dont have another way of saying this')
         
         

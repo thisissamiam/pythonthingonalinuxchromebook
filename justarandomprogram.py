@@ -27,7 +27,7 @@ stats = {
 "PlayersGrade": 80
 }
 def MakeErrorMessage(stdscr, message):
-    stdscr.addstr(0,100, message)
+    stdscr.addstr(0,500, message)
 def main(stdscr):
     curses.curs_set(0) # Hide text curser
     stdscr.keypad(True)
